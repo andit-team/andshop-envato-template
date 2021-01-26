@@ -151,7 +151,7 @@
 
                 <div class="cart_list user_dropdown_list">
                   <!--  For Authenticate Users -->
-                  <span v-if="$auth.loggedIn">
+                  <span>
                     <b-dropdown-item :href="$config.CUSTOMER_PANEL_URL">
                       <div class="mr-3"><i class="far fa-smile"></i></div>
                       <div class="media-body">
@@ -196,7 +196,7 @@
                   </span>
 
                   <!--  For UnAuthenticate Users -->
-                  <span v-else>
+                  <span>
                     <b-dropdown-item to="/auth/registration">
                       <div class="mr-3"><i class="far fa-user"></i></div>
                         <div class="media-body">
@@ -232,7 +232,7 @@
                   <!-- Categories Nav Dropdown for Desktop -->
                   <b-dropdown id="categories_nav_dropdown" class="all-categories-button w-100  bg-red px-3 categories_nav_dropdown">
                     <template #button-content class="bg-transparent">
-                      <i class="fas fa-bars mr-2"></i><h6>All categories</h6><i class="fas fa-angle-down ml-2"></i>
+                      <h6><i class="fas fa-bars mr-2"></i><span>All categories</span></h6><i class="fas fa-angle-down ml-2"></i>
                     </template>
                     <ParentCategoryList />
                   </b-dropdown>
@@ -241,18 +241,54 @@
 
               <div class="col-md-9 col-lg-9 p-0">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
+                  <!-- <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                       <a class="nav-link" href="#">All Shops</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Best Offers</a>
                     </li>
-                  </ul>
-                  <ul class="navbar-nav  my-2 my-lg-0">
+                  </ul> -->
+                  <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    
+                    <b-nav-item-dropdown right>
+                      <template #button-content>
+                        Home<i class="fas fa-angle-down ml-2"></i>
+                      </template>
+                      <b-dropdown-item href="#">Fashion</b-dropdown-item>
+                      <b-dropdown-item href="#">Electronics</b-dropdown-item>
+                      <b-dropdown-item href="#">Furniture</b-dropdown-item>
+                      <b-dropdown-item href="#">Groceries</b-dropdown-item>
+                    </b-nav-item-dropdown>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Sell on Andbaazar</a>
+                      <a class="nav-link" href="#">Shop</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <b-nav-item-dropdown right>
+                      <template #button-content>
+                        Pages<i class="fas fa-angle-down ml-2"></i>
+                      </template>
+
+                      <b-dropdown-item href="#">Account</b-dropdown-item>
+                      <b-dropdown-item href="#">About Us</b-dropdown-item>
+                      <b-dropdown-item href="#">Review</b-dropdown-item>
+                      <b-dropdown-item href="#">Order Success</b-dropdown-item>
+                      <b-dropdown-item href="#">404</b-dropdown-item>
+                      <b-dropdown-item href="#">FAQ</b-dropdown-item>
+                      <b-dropdown-item href="#">Coming Soon</b-dropdown-item>
+                    </b-nav-item-dropdown>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Sell on Andshop</a>
+                    </li>
+
                     <b-nav-item-dropdown right class="track-order-dropdown">
                       <template #button-content>
                         Track my order
@@ -283,52 +319,64 @@
                 </div>
               </div>
 
-                <!-- Mobile Device Menu and Buttons Wrap -->
-                <div class="mobile_all_menu_container w-100 d-flex align-content-center justify-content-between">
+              <!-- Mobile Device Menu and Buttons Wrap -->
+              <div class="mobile_all_menu_container w-100 d-flex align-content-center justify-content-between">
 
-                  <!-- Mobile Sidebar Category Menu Left -->
-                  <b-button v-b-toggle.sidebar_category_menu class="sidebar-menu-button bg-transparent border-0"><i class="fas fa-bars"></i></b-button>
+                <!-- Mobile Sidebar Category Menu Left -->
+                <b-button v-b-toggle.sidebar_category_menu class="sidebar-menu-button bg-transparent border-0"><i class="fas fa-bars"></i></b-button>
 
-                  <!-- Sidebar Mobile Category Menu Left -->
-                  <b-sidebar id="sidebar_category_menu" left shadow backdrop>
-                    <div class="px-3 py-2">
-                      <ParentCategoryList />
-                    </div>
-                  </b-sidebar>
-                  <!-- Mobile Sidebar Category Menu -->
-
-                  <div class="mobile_right_menu_wrap d-flex align-content-center">
-                    <div class="mobile_menu_search_wrap position-relative mr-3">
-                      <ProductSearch />
-                    </div>
-
-                    <!-- Sidebar Menu General -->
-                      <!-- Sidebar Menu General Button -->
-                      <b-button v-b-toggle.sidebar_general_menu class="sidebar-menu-button bg-transparent border-0"><i class="fas fa-bars"></i></b-button>
-
-                      <b-sidebar id="sidebar_general_menu" right shadow backdrop>
-                        <div class="px-3 py-2">
-                          <ul>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">All Shops</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Best Offers</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Sell on Andbaazar</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Track my order</a>
-                            </li>
-                        </ul>
-                        </div>
-                      </b-sidebar>
-                    <!-- Sidebar Menu General -->
-
+                <!-- Sidebar Mobile Category Menu Left -->
+                <b-sidebar id="sidebar_category_menu" left shadow backdrop>
+                  <div class="px-3 py-2">
+                    <ParentCategoryList />
                   </div>
+                </b-sidebar>
+                <!-- Mobile Sidebar Category Menu -->
+
+                <div class="mobile_right_menu_wrap d-flex align-content-center">
+                  <div class="mobile_menu_search_wrap position-relative mr-3">
+                    <ProductSearch />
+                  </div>
+
+                  <!-- Sidebar Menu General -->
+                    <!-- Sidebar Menu General Button -->
+                    <b-button v-b-toggle.sidebar_general_menu class="sidebar-menu-button bg-transparent border-0"><i class="fas fa-bars"></i></b-button>
+
+                    <b-sidebar id="sidebar_general_menu" right shadow backdrop>
+                      <div class="px-3 py-2">
+                        <ul>
+                          <b-nav-item-dropdown right>
+                            <template #button-content>
+                              Home<i class="fas fa-angle-down ml-2"></i>
+                            </template>
+                            <b-dropdown-item href="#">Fashion</b-dropdown-item>
+                            <b-dropdown-item href="#">Electronics</b-dropdown-item>
+                            <b-dropdown-item href="#">Furniture</b-dropdown-item>
+                            <b-dropdown-item href="#">Groceries</b-dropdown-item>
+                          </b-nav-item-dropdown>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Products</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Pages</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                          </li>
+                      </ul>
+                      </div>
+                    </b-sidebar>
+                  <!-- Sidebar Menu General -->
+
                 </div>
-                <!-- Mobile Device Menu and Buttons Wrap -->
+              </div>
+              <!-- Mobile Device Menu and Buttons Wrap -->
 
             </nav>
 
@@ -337,23 +385,12 @@
       </div>
     </div>
   </section>
-  <!-- Menu Area End --------->
+  <!-- Menu Area End -->
 </template>
 
 <script>
   export default {
-    name: 'menuBar',
-    methods:{
-      logout(){
-        this.$auth.logout();
-        this.$router.push('/');
-      }
-    },
-    computed:{
-      userAuthStatus(){
-        return this.$store.state.userinfo.userLoggedIn;
-      }
-    }
+    name: 'menuBar2',
   }
 </script>
 

@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import {user_login, get_user_profile} from "~/api/urls";
 export default {
   name: 'userLogin',
   data(){
@@ -47,30 +46,8 @@ export default {
       remember_me: false,
       authFailed: false,
       authError: '',
-      api_base_url : this.$config.API_BASE_URL
     }
   },
-  methods:{
-    async userLogin() {
-      try {
-        let userInfo = {
-          uname: this.uname,
-          password: this.password,
-          remember_me: this.remember_me,
-        };
-        let res = await this.$auth.loginWith('local', { data: userInfo });
-        if (res.data.error === true){
-          this.authFailed=true
-          this.authError=res.data.msg
-        }
-        else {
-          this.$router.push('/');
-        }
-      } catch (err) {
-        console.log(err)
-      }
-    }
-  }
 
 }
 </script>

@@ -8,22 +8,22 @@
 
         <div class="info-row-wrap" v-if="!openUpdateForm">
           <div class="info-row d-flex pb-2">
-            <p class="w-25"><strong>Andbaazar Number:</strong></p> <p>0123456789</p>
+            <p><strong>Andbaazar Number:</strong></p> <p>0123456789</p>
           </div>
           <div class="info-row d-flex pb-2">
-            <p class="w-25"><strong>First Name:</strong></p> <p>Suraiya</p>
+            <p><strong>First Name:</strong></p> <p>Suraiya</p>
           </div>
           <div class="info-row d-flex pb-2">
-            <p class="w-25"><strong>Last Name:</strong></p> <p>Aysha</p>
+            <p><strong>Last Name:</strong></p> <p>Aysha</p>
           </div>
           <div class="info-row d-flex pb-2">
-            <p class="w-25"><strong>Contact Number:</strong></p> <p>0123456789</p>
+            <p><strong>Contact Number:</strong></p> <p>0123456789</p>
           </div>
           <div class="info-row d-flex pb-2">
-            <p class="w-25"><strong>Gender:</strong></p> <p>female</p>
+            <p><strong>Gender:</strong></p> <p>female</p>
           </div>
           <div class="info-row d-flex pb-2">
-            <p class="w-25"><strong>Email:</strong></p> <p>demo@example.com</p>
+            <p><strong>Email:</strong></p> <p>demo@example.com</p>
           </div>
         </div>
 

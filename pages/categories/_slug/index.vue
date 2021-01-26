@@ -54,7 +54,7 @@
                     :enable-cross="false"
                     @drag-end="sliderRange()"
                   ></vue-slider>
-                  <p class="mt-3">Price: <span>৳ {{range[0]}} - ৳ {{range[1]}}</span></p>
+                  <p class="mt-3">Price: <span>$ {{range[0]}} - $ {{range[1]}}</span></p>
                 </div>
               </div>
               <!-- Left side bar box end-->

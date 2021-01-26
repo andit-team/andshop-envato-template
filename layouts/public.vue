@@ -2,7 +2,7 @@
   <div>
     <FullPageLoader />
 
-    <MenuBar2 />
+    <MenuBar1 />
 
     <nuxt id="body-content"/>
     <div class="tap-top top-cls" v-scroll-to="'#body-content'">
@@ -20,7 +20,7 @@
 </style>
 <script>
   export default {
-    name: 'DefaultLayout',
+    name: 'Public',
 
     head() {
       return {

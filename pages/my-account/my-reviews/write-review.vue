@@ -196,5 +196,16 @@ export default {
 </script>
 
 <style>
+.write-review-page form .upload-img button {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+}
+.write-review-page form .upload-img button:hover {
+  border: 1px solid var(--border-color)!important;
+}
+.write-review-page form .upload-img .customer-info-box:active, .write-review-page form .upload-img .customer-info-box.btn-secondary:not(:disabled):not(.disabled):active, .write-review-page form .upload-img .customer-info-box.btn-secondary:not(:disabled):not(.disabled).active, .write-review-page form .upload-img .customer-info-box.show > .btn-secondary.dropdown-toggle, .write-review-page form .upload-img .customer-info-box.btn-secondary:not(:disabled):not(.disabled):active, .write-review-page form .upload-img .customer-info-box.btn-secondary:not(:disabled):not(.disabled).active, .write-review-page form .upload-img .customer-info-box.show > .btn-secondary.dropdown-toggle {
+  background-color: #fff!important;
+  border: 1px solid var(--border-color)!important;
+}
 
 </style>

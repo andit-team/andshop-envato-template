@@ -15,7 +15,7 @@
 
   head() {
     return {
-      title: 'Krishibaazar'
+      title: '404 - Andshop'
     }
   },
   mounted() {

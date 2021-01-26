@@ -104,7 +104,7 @@
                       <div class="delivery-box d-flex rounded p-2 mb-2">
                         <span class="mr-2"><i class="fas fa-check-circle"></i></span>
                         <div class="delivery-content">
-                          <p class="font-14">৳ 65</p>
+                          <p class="font-14">$ 65</p>
                           <p class="font-14">Home delivery</p>
                           <p class="font-14">Est. Arrival: 3-5 Jan</p>
                         </div>
@@ -152,7 +152,7 @@
                       <div class="delivery-box d-flex rounded p-2 mb-2">
                         <span class="mr-2"><i class="fas fa-check-circle"></i></span>
                         <div class="delivery-content">
-                          <p class="font-14">৳ 65</p>
+                          <p class="font-14">$ 65</p>
                           <p class="font-14">Home delivery</p>
                           <p class="font-14">Est. Arrival: 3-5 Jan</p>
                         </div>
@@ -241,7 +241,7 @@
                   <div class=" py-3 font-weight-bold">Order summary </div>
                   <ul class="list-unstyled mb-4">
                     <li class="d-flex justify-content-between py-3"><strong class="text-muted">Order Subtotal (0 items) </strong><strong>$390.00</strong></li>
-                    <li class="d-flex justify-content-between py-3"><strong class="text-muted">Shipping Fee </strong><strong>৳ 65</strong></li>
+                    <li class="d-flex justify-content-between py-3"><strong class="text-muted">Shipping Fee </strong><strong>$ 65</strong></li>
 
                     <form class="form-inline w-100">
                       <div class="form-group">

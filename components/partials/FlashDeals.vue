@@ -1,6 +1,6 @@
 <template>
-  <!-- Flash Deals Area Start ------------->
-  <section class="flash-deals-area section-t-space" v-if="(flashDealProducts.length>0)">
+  <!-- Flash Deals Area Start -->
+  <section class="flash-deals-area section-t-space">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -234,44 +234,14 @@
 </template>
 
 <script>
-import {get_flash_deal_products} from "~/api/urls";
 
 export default {
   name: "FlashDeals",
   data() {
     return {
       flashDealExist : false,
-      api_base_url : this.$config.API_BASE_URL
     }
   },
-  methods:{
-    getFlashDealProducts(){
-      let self = this;
-      let config = {
-        headers: {'Content-Type': 'application/json'}
-      };
-      this.$axios.$get(this.api_base_url+get_flash_deal_products, config).then((res) => {
-        if (res.error === false) {
-          self.$store.commit('siteinfo/updateFlashDealProducts',res.data);
-        }
-        else {
-          console.log(res.msg)
-        }
-      }).catch((error) => {
-        console.log(error);
-      });
-    }
-  },
-  computed:{
-    flashDealProducts(){
-      return this.$store.state.siteinfo.flashDealProducts;
-    }
-  },
-  mounted() {
-    if (this.flashDealProducts.length<=0){
-      this.getFlashDealProducts();
-    }
-  }
 }
 </script>
 

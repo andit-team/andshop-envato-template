@@ -22,7 +22,7 @@
               <!-- Top Rated item start-->
               <swiper-slide>
                 <div class="product-item rounded bg-white">
-                  <nuxt-link to="/products/potato">
+                  <nuxt-link to="/product-details/">
                     <div class="img-wrap mb-2">
                       <img src="~/assets/images/best-sellers/1.jpg" alt="products" class="rounded-top">
                     </div>
@@ -48,9 +48,9 @@
               <!-- Top Rated item start-->
               <swiper-slide>
                 <div class="product-item rounded bg-white">
-                  <nuxt-link to="/products/potato">
+                  <nuxt-link to="/product-details/">
                     <div class="img-wrap mb-2">
-                      <img src="~/assets/images/best-sellers/1.jpg" alt="products" class="rounded-top">
+                      <img src="~/assets/images/best-sellers/2.jpg" alt="products" class="rounded-top">
                     </div>
                     <div class="product-content">
                       <p class="product-tags text-uppercase">bath & body, football, tennis</p>
@@ -74,9 +74,9 @@
               <!-- Top Rated item start-->
               <swiper-slide>
                 <div class="product-item rounded bg-white">
-                  <nuxt-link to="/products/potato">
+                  <nuxt-link to="/product-details/">
                     <div class="img-wrap mb-2">
-                      <img src="~/assets/images/best-sellers/1.jpg" alt="products" class="rounded-top">
+                      <img src="~/assets/images/best-sellers/3.jpg" alt="products" class="rounded-top">
                     </div>
                     <div class="product-content">
                       <p class="product-tags text-uppercase">bath & body, football, tennis</p>
@@ -100,9 +100,9 @@
               <!-- Top Rated item start-->
               <swiper-slide>
                 <div class="product-item rounded bg-white">
-                  <nuxt-link to="/products/potato">
+                  <nuxt-link to="/product-details/">
                     <div class="img-wrap mb-2">
-                      <img src="~/assets/images/best-sellers/1.jpg" alt="products" class="rounded-top">
+                      <img src="~/assets/images/best-sellers/4.jpg" alt="products" class="rounded-top">
                     </div>
                     <div class="product-content">
                       <p class="product-tags text-uppercase">bath & body, football, tennis</p>
@@ -126,9 +126,9 @@
               <!-- Top Rated item start-->
               <swiper-slide>
                 <div class="product-item rounded bg-white">
-                  <nuxt-link to="/products/potato">
+                  <nuxt-link to="/product-details/">
                     <div class="img-wrap mb-2">
-                      <img src="~/assets/images/best-sellers/1.jpg" alt="products" class="rounded-top">
+                      <img src="~/assets/images/best-sellers/5.jpg" alt="products" class="rounded-top">
                     </div>
                     <div class="product-content">
                       <p class="product-tags text-uppercase">bath & body, football, tennis</p>
@@ -152,9 +152,9 @@
               <!-- Top Rated item start-->
               <swiper-slide>
                 <div class="product-item rounded bg-white">
-                  <nuxt-link to="/products/potato">
+                  <nuxt-link to="/product-details/">
                     <div class="img-wrap mb-2">
-                      <img src="~/assets/images/best-sellers/1.jpg" alt="products" class="rounded-top">
+                      <img src="~/assets/images/best-sellers/5.jpg" alt="products" class="rounded-top">
                     </div>
                     <div class="product-content">
                       <p class="product-tags text-uppercase">bath & body, football, tennis</p>
@@ -178,35 +178,9 @@
               <!-- Top Rated item start-->
               <swiper-slide>
                 <div class="product-item rounded bg-white">
-                  <nuxt-link to="/products/potato">
+                  <nuxt-link to="/product-details/">
                     <div class="img-wrap mb-2">
-                      <img src="~/assets/images/best-sellers/1.jpg" alt="products" class="rounded-top">
-                    </div>
-                    <div class="product-content">
-                      <p class="product-tags text-uppercase">bath & body, football, tennis</p>
-                      <p class="product-title font-bold">Cornboat Holders</p>
-                      <div class="rating_wrap mb-1">
-                        <div class="rating">
-                          <div class="product_rate" style="width:87%"></div>
-                        </div>
-                      </div>
-                      <p>
-                        <span class="price mr-1 text-muted" style="text-decoration: line-through">$4.00</span>
-                        <span class="discounted-price mr-1 color-red">$2.00</span>
-                        <span class="special-tag badge bg-red white-color">Sale</span>
-                      </p>
-                    </div>
-                  </nuxt-link>
-                </div>
-              </swiper-slide>
-              <!-- Top Rated item end-->
-
-              <!-- Top Rated item start-->
-              <swiper-slide>
-                <div class="product-item rounded bg-white">
-                  <nuxt-link to="/products/potato">
-                    <div class="img-wrap mb-2">
-                      <img src="~/assets/images/best-sellers/1.jpg" alt="products" class="rounded-top">
+                      <img src="~/assets/images/best-sellers/3.jpg" alt="products" class="rounded-top">
                     </div>
                     <div class="product-content">
                       <p class="product-tags text-uppercase">bath & body, football, tennis</p>
@@ -240,7 +214,6 @@
 </template>
 
 <script>
-import {get_top_rated_products} from "@/api/urls";
 
 export default {
   data() {
@@ -295,37 +268,8 @@ export default {
           }
         }
       },
-      api_base_url : this.$config.API_BASE_URL
     }
   },
-  methods:{
-    getTopRatedProducts(){
-      let self = this;
-      let config = {
-        headers: {'Content-Type': 'application/json'}
-      };
-      this.$axios.$get(this.api_base_url+get_top_rated_products, config).then((res) => {
-        if (res.error === false) {
-          self.$store.commit('siteinfo/updateTopRatedProducts',res.data);
-        }
-        else {
-          // console.log(res.msg)
-        }
-      }).catch((error) => {
-        console.log(error);
-      });
-    }
-  },
-  computed:{
-    topRatedProducts(){
-      return this.$store.state.siteinfo.topRatedProducts;
-    }
-  },
-  mounted() {
-    if (this.topRatedProducts.length<=0){
-      this.getTopRatedProducts();
-    }
-  }
 }
 </script>
 

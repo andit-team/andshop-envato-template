@@ -1,5 +1,5 @@
 <template>
-  <!-- Footer Area Start ------>
+  <!-- Footer Area Start -->
   <footer class="footer-top bg-different section-t-space">
     <FooterSubscribe />
     <section class="section-b-space">
@@ -111,7 +111,7 @@
           <div class="col-xl-6 col-md-6 col-sm-12">
             <div class="footer-end">
               <p class="white-color font-14">
-                <i class="fa fa-copyright" aria-hidden="true"></i> 2019-2020 Andbaazar. All Rights Reserved
+                <i class="fa fa-copyright" aria-hidden="true"></i> 2019-2020 Andshop. All Rights Reserved
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@
               <ul>
                 <li>
                   <a href="#">
-                    Sell On Andbaazar
+                    Sell On Andshop
                   </a>
                 </li>
                 <li>
@@ -140,7 +140,7 @@
       </div>
     </div>
   </footer>
-  <!-- Footer Area End ------>
+  <!-- Footer Area End -->
 </template>
 
 <script>

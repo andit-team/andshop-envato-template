@@ -56,93 +56,6 @@
             </nuxt-link>
             <ProductSearch />
             <ul class="attr-nav d-flex align-items-center">
-              <b-dropdown id="dropdown-1" class="cart_dropdown middle-menu-dropdown">
-                <template #button-content class="bg-transparent">
-                  <i class="fas fa-cart-arrow-down"></i>
-                  <span class="cart_count">2</span>
-                </template>
-
-                <div class="cart_list">
-
-                  <b-dropdown-item to="#">
-                    <img src="~/assets/images/products/1.jpg" class="mr-3" alt="product">
-                    <div class="media-body">
-                      <h6 class="mt-0 mb-1 d-flex justify-content-between align-items-center font-14 text-capitalize"><span>product name</span><i class="fas fa-times"></i></h6>
-                      <p>1x$81.00</p>
-                    </div>
-                  </b-dropdown-item>
-
-                  <b-dropdown-item to="#">
-                    <img src="~/assets/images/products/1.jpg" class="mr-3" alt="product">
-                    <div class="media-body">
-                      <h6 class="mt-0 mb-1 d-flex justify-content-between align-items-center font-14 text-capitalize"><span>product name</span><i class="fas fa-times"></i></h6>
-                      <p>1x$81.00</p>
-                    </div>
-                  </b-dropdown-item>
-
-                  <div class="cart_footer">
-                    <p class="cart_total d-flex align-items-center justify-content-between"><strong>Subtotal:</strong> <span class="cart_price"> <span class="price_symbole">$159.00</span></span></p>
-                    <p class="cart_buttons d-flex justify-content-center"><nuxt-link class="theme-button font-12 rounded view-cart" to="/cart">View Cart</nuxt-link><nuxt-link to="/checkout" class="theme-button font-12 rounded checkout">Checkout</nuxt-link></p>
-                  </div>
-
-                </div>
-              </b-dropdown>
-
-              <b-dropdown id="dropdown-2" class="middle-menu-dropdown notification_dropdown">
-                <template #button-content class="bg-transparent">
-                  <i class="far fa-bell"></i>
-
-                  <span class="cart_count">2</span>
-                </template>
-
-                <div class="cart_list notification_dropdown_list">
-
-                  <b-dropdown-item to="#" class="media position-relative">
-                    <div class="mr-3"><i class="far fa-bell"></i></div>
-                    <div class="media-body d-flex justify-content-align-content-between">
-                      <div class="notification-content pr-2">
-                        <p class="font-14 text-break" style="white-space: pre-line"><strong>Morgan Mor</strong> says something about him. Says something....</p>
-                        <p class="font-12"><i class="far fa-clock"></i> 1 day</p>
-                      </div>
-                      <div class="notification-buttons fon-12 d-flex flex-column justify-content-around">
-                        <i class="fas fa-times"></i>
-                        <i class="fas fa-check-circle"></i>
-                      </div>
-                    </div>
-                  </b-dropdown-item>
-
-                  <b-dropdown-item to="#" class="media position-relative">
-                    <div class="mr-3"><i class="far fa-bell"></i></div>
-                    <div class="media-body d-flex justify-content-align-content-between">
-                      <div class="notification-content pr-2">
-                        <p class="font-14 text-break" style="white-space: pre-line"><strong>Morgan Mor</strong> says something about him. Says something....</p>
-                        <p class="font-12"><i class="far fa-clock"></i> 1 day</p>
-                      </div>
-                      <div class="notification-buttons fon-12 d-flex flex-column justify-content-around">
-                        <i class="fas fa-times"></i>
-                        <i class="fas fa-check-circle"></i>
-                      </div>
-                    </div>
-                  </b-dropdown-item>
-
-                  <b-dropdown-item to="#" class="media position-relative">
-                    <div class="mr-3"><i class="far fa-bell"></i></div>
-                    <div class="media-body d-flex justify-content-align-content-between">
-                      <div class="notification-content pr-2">
-                        <p class="font-14 text-break" style="white-space: pre-line"><strong>Morgan Mor</strong> says something about him. Says something....</p>
-                        <p class="font-12"><i class="far fa-clock"></i> 1 day</p>
-                      </div>
-                      <div class="notification-buttons fon-12 d-flex flex-column justify-content-around">
-                        <i class="fas fa-times"></i>
-                        <i class="fas fa-check-circle"></i>
-                      </div>
-                    </div>
-                  </b-dropdown-item>
-
-                  <div class="text-center see-all-btn"><nuxt-link to="#" class="small-button theme-button rounded">See all</nuxt-link></div>
-
-                </div>
-              </b-dropdown>
 
               <b-dropdown id="dropdown-3" class="middle-menu-dropdown user_dropdown">
                 <template #button-content class="bg-transparent">
@@ -151,43 +64,49 @@
 
                 <div class="cart_list user_dropdown_list">
                   <!--  For Authenticate Users -->
-                  <span v-if="$auth.loggedIn">
-                    <b-dropdown-item :href="$config.CUSTOMER_PANEL_URL">
+                  <span v-if="userAuthStatus">
+                    <b-dropdown-item to="#">
                       <div class="mr-3"><i class="far fa-smile"></i></div>
                       <div class="media-body">
-                        <p>Manage my account</p>
+                        <nuxt-link to="/my-account">
+                          <p>Manage my account</p>
+                        </nuxt-link>
                       </div>
                     </b-dropdown-item>
 
-                    <b-dropdown-item :href="$config.CUSTOMER_PANEL_URL+'/my-orders'">
+                    <b-dropdown-item to="#">
                       <div class="mr-3"><i class="fas fa-box"></i></div>
                       <div class="media-body">
-                        <p>Manage my account</p>
+                        <nuxt-link to="/my-account/my-orders">
+                          <p>My orders</p>
+                        </nuxt-link>
                       </div>
                     </b-dropdown-item>
 
-                    <b-dropdown-item :href="$config.CUSTOMER_PANEL_URL+'/wishlist'">
+                    <b-dropdown-item to="#">
                       <div class="mr-3"><i class="far fa-heart"></i></div>
                       <div class="media-body">
-                        <p>My wishlist</p>
+                        <nuxt-link to="/my-account/wishlist">
+                          <p>My wishlist and followed stores</p>
+                        </nuxt-link>
                       </div>
                     </b-dropdown-item>
 
-                    <b-dropdown-item :href="$config.CUSTOMER_PANEL_URL+'/my-orders'">
+                    <b-dropdown-item to="#">
                       <div class="mr-3"><i class="far fa-star"></i></div>
                       <div class="media-body">
                         <p>My reviews</p>
                       </div>
                     </b-dropdown-item>
 
-                    <b-dropdown-item :href="$config.CUSTOMER_PANEL_URL+'/my-orders'">
+                    <b-dropdown-item to="#">
                       <div class="mr-3"><i class="far fa-times-circle"></i></div>
                       <div class="media-body">
                         <p>My returns and cancellations</p>
                       </div>
                     </b-dropdown-item>
 
-                    <b-dropdown-item @click.prevent="logout">
+                    <b-dropdown-item to="#">
                       <div class="mr-3"><i class="fas fa-sign-out-alt"></i></div>
                       <div class="media-body">
                         <p>Logout</p>
@@ -195,19 +114,24 @@
                     </b-dropdown-item>
                   </span>
 
-                  <!--  For UnAuthenticate Users -->
+
+                <!--  For UnAuthenticate Users -->
                   <span v-else>
-                    <b-dropdown-item to="/auth/registration">
+                    <b-dropdown-item to="#">
                       <div class="mr-3"><i class="far fa-user"></i></div>
                         <div class="media-body">
+                          <nuxt-link to="/auth/registration">
                           <p>Signup</p>
+                          </nuxt-link>
                         </div>
                     </b-dropdown-item>
 
-                    <b-dropdown-item to="/auth/login">
+                    <b-dropdown-item to="#">
                       <div class="mr-3"><i class="fas fa-key"></i></div>
                         <div class="media-body">
+                          <nuxt-link to="/auth/login">
                           <p>Login</p>
+                          </nuxt-link>
                         </div>
                     </b-dropdown-item>
                   </span>
@@ -227,31 +151,25 @@
           <div class="col-12">
             <nav id="mainNav" class="navbar navbar-expand-lg">
 
-              <div class="col-md-3 col-lg-3 pl-0">
-                <div class="mr-1 h-100">
-                  <!-- Categories Nav Dropdown for Desktop -->
-                  <b-dropdown id="categories_nav_dropdown" class="all-categories-button w-100  bg-red px-3 categories_nav_dropdown">
-                    <template #button-content class="bg-transparent">
-                      <i class="fas fa-bars mr-2"></i><h6>All categories</h6><i class="fas fa-angle-down ml-2"></i>
-                    </template>
-                    <ParentCategoryList />
-                  </b-dropdown>
-                </div>
-              </div>
-
-              <div class="col-md-9 col-lg-9 p-0">
+              <div class="col-md-12 col-lg-12 p-0">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">All Shops</a>
+                      <nuxt-link to="/fashion" target="_blank" class="nav-link">Fashion</nuxt-link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Best Offers</a>
+                      <nuxt-link to="#" target="_blank" class="nav-link">Electronics</nuxt-link>
+                    </li>
+                    <li class="nav-item">
+                      <nuxt-link to="#" target="_blank" class="nav-link">Furniture</nuxt-link>
+                    </li>
+                    <li class="nav-item">
+                      <nuxt-link to="#" target="_blank" class="nav-link">Groceries</nuxt-link>
                     </li>
                   </ul>
                   <ul class="navbar-nav  my-2 my-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Sell on Andbaazar</a>
+                      <a class="nav-link" href="#">Sell on Andshop</a>
                     </li>
                     <b-nav-item-dropdown right class="track-order-dropdown">
                       <template #button-content>
@@ -286,17 +204,6 @@
                 <!-- Mobile Device Menu and Buttons Wrap -->
                 <div class="mobile_all_menu_container w-100 d-flex align-content-center justify-content-between">
 
-                  <!-- Mobile Sidebar Category Menu Left -->
-                  <b-button v-b-toggle.sidebar_category_menu class="sidebar-menu-button bg-transparent border-0"><i class="fas fa-bars"></i></b-button>
-
-                  <!-- Sidebar Mobile Category Menu Left -->
-                  <b-sidebar id="sidebar_category_menu" left shadow backdrop>
-                    <div class="px-3 py-2">
-                      <ParentCategoryList />
-                    </div>
-                  </b-sidebar>
-                  <!-- Mobile Sidebar Category Menu -->
-
                   <div class="mobile_right_menu_wrap d-flex align-content-center">
                     <div class="mobile_menu_search_wrap position-relative mr-3">
                       <ProductSearch />
@@ -310,10 +217,19 @@
                         <div class="px-3 py-2">
                           <ul>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">All Shops</a>
+                              <a class="nav-link" target="_blank" href="#">Ecommerce</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Best Offers</a>
+                              <a class="nav-link" target="_blank" href="#">Krishibaazar</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" target="_blank" href="#">Auction</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" target="_blank" href="#">SME</a>
+                            </li>
+                            <li class="nav-item">
+                              <nuxt-link to="/news-feed" class="nav-link">News feed</nuxt-link>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">Sell on Andbaazar</a>
@@ -342,22 +258,10 @@
 
 <script>
   export default {
-    name: 'menuBar',
-    methods:{
-      logout(){
-        this.$auth.logout();
-        this.$router.push('/');
-      }
-    },
-    computed:{
-      userAuthStatus(){
-        return this.$store.state.userinfo.userLoggedIn;
-      }
-    }
+    name: 'menuBar1',
   }
 </script>
 
 <style scoped>
 
 </style>
-

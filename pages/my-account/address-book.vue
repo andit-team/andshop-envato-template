@@ -5,13 +5,13 @@
       <div class="info-box w-100">
         <!-- List Address-->
         <div class="address-table" v-if="addreList">
-          <b-table :items="items">
+          <b-table responsive :items="items">
             <template #cell(action)>
               <button @click="updateState('edit')" class="hover-color">Edit</button>
             </template>
           </b-table>
 
-          <button @click="updateState('addNew')" class="bg-red text-white p-2 rounded float-right">+ Add new address</button>
+          <div class="text-right"><button @click="updateState('addNew')" class="bg-red text-white p-2 rounded">+ Add new address</button></div>
 
         </div>
 

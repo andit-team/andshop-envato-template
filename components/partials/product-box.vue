@@ -20,7 +20,7 @@
                 </div>
                 <p>
                 <!-- <span class="price mr-1 text-muted" style="text-decoration: line-through">$4.00</span> -->
-                <span class="discounted-price mr-1 color-red">৳ {{product.price}}</span>
+                <span class="discounted-price mr-1 color-red">$ {{product.price}}</span>
                 <!-- <span class="special-tag badge bg-red white-color">Sale</span> -->
                 </p>
             </div>

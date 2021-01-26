@@ -24,7 +24,7 @@
 
 <script>
 export default {
-layout: 'dashboard',
+  layout: 'dashboard',
   data() {
     return {
       rows: 100,

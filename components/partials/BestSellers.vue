@@ -1,5 +1,5 @@
 <template>
-  <!-- Best Seller Area Start ------------->
+  <!-- Best Seller Area Start -->
   <section class="best-seller-area section-t-space bg-different">
     <div class="container">
       <div class="row">
@@ -18,24 +18,23 @@
           <div class="best-seller-slider-wrap d-flex flex-wrap justify-content-between">
             <client-only>
               <swiper class="swiper" :options="swiperOption">
-                <span v-for="(bestSellerProduct, index) in bestSellerProducts" :key="index">
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link :to="`/products/${bestSellerProduct.slug}`">
+                      <nuxt-link to="">
                         <div class="img-wrap mb-2">
-                          <img :src="bestSellerProduct.thumbnail_image" alt="products" class="rounded-top">
+                          <img :src="require('@/assets/images/best-sellers/1.jpg')" alt="products" class="rounded-top">
                         </div>
                         <div class="product-content">
-                          <p class="product-tags text-uppercase">{{ bestSellerProduct.name }}</p>
-                          <p class="product-title font-bold">{{ bestSellerProduct.shop }}</p>
+                          <p class="product-tags text-uppercase">Alu, Morich</p>
+                          <p class="product-title font-bold">Product Title Here</p>
                           <div class="rating_wrap mb-1">
                             <div class="rating">
                               <div class="product_rate" style="width:87%"></div>
                             </div>
                           </div>
                           <p>
-                            <span class="price mr-1 text-muted">{{ bestSellerProduct.wholesale_price }}৳ - {{ bestSellerProduct.price }}৳</span>
+                            <span class="price mr-1 text-muted">20$ - 50$</span>
                             <span class="special-tag badge bg-red white-color">Sale</span>
                           </p>
                         </div>
@@ -43,7 +42,176 @@
                     </div>
                   </swiper-slide>
                   <!-- Best Seller item end-->
-                </span>
+
+                  <!-- Best Seller item start-->
+                  <swiper-slide>
+                    <div class="product-item rounded bg-white">
+                      <nuxt-link to="">
+                        <div class="img-wrap mb-2">
+                          <img :src="require('@/assets/images/best-sellers/2.jpg')" alt="products" class="rounded-top">
+                        </div>
+                        <div class="product-content">
+                          <p class="product-tags text-uppercase">Alu, Morich</p>
+                          <p class="product-title font-bold">Product Title Here</p>
+                          <div class="rating_wrap mb-1">
+                            <div class="rating">
+                              <div class="product_rate" style="width:87%"></div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="price mr-1 text-muted">20$ - 50$</span>
+                            <span class="special-tag badge bg-red white-color">Sale</span>
+                          </p>
+                        </div>
+                      </nuxt-link>
+                    </div>
+                  </swiper-slide>
+                  <!-- Best Seller item end-->
+
+                  <!-- Best Seller item start-->
+                  <swiper-slide>
+                    <div class="product-item rounded bg-white">
+                      <nuxt-link to="">
+                        <div class="img-wrap mb-2">
+                          <img :src="require('@/assets/images/best-sellers/3.jpg')" alt="products" class="rounded-top">
+                        </div>
+                        <div class="product-content">
+                          <p class="product-tags text-uppercase">Alu, Morich</p>
+                          <p class="product-title font-bold">Product Title Here</p>
+                          <div class="rating_wrap mb-1">
+                            <div class="rating">
+                              <div class="product_rate" style="width:87%"></div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="price mr-1 text-muted">20$ - 50$</span>
+                            <span class="special-tag badge bg-red white-color">Sale</span>
+                          </p>
+                        </div>
+                      </nuxt-link>
+                    </div>
+                  </swiper-slide>
+                  <!-- Best Seller item end-->
+                  <!-- Best Seller item start-->
+                  <swiper-slide>
+                    <div class="product-item rounded bg-white">
+                      <nuxt-link to="">
+                        <div class="img-wrap mb-2">
+                          <img :src="require('@/assets/images/best-sellers/4.jpg')" alt="products" class="rounded-top">
+                        </div>
+                        <div class="product-content">
+                          <p class="product-tags text-uppercase">Alu, Morich</p>
+                          <p class="product-title font-bold">Product Title Here</p>
+                          <div class="rating_wrap mb-1">
+                            <div class="rating">
+                              <div class="product_rate" style="width:87%"></div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="price mr-1 text-muted">20$ - 50$</span>
+                            <span class="special-tag badge bg-red white-color">Sale</span>
+                          </p>
+                        </div>
+                      </nuxt-link>
+                    </div>
+                  </swiper-slide>
+                  <!-- Best Seller item end-->
+                  <!-- Best Seller item start-->
+                  <swiper-slide>
+                    <div class="product-item rounded bg-white">
+                      <nuxt-link to="">
+                        <div class="img-wrap mb-2">
+                          <img :src="require('@/assets/images/best-sellers/5.jpg')" alt="products" class="rounded-top">
+                        </div>
+                        <div class="product-content">
+                          <p class="product-tags text-uppercase">Alu, Morich</p>
+                          <p class="product-title font-bold">Product Title Here</p>
+                          <div class="rating_wrap mb-1">
+                            <div class="rating">
+                              <div class="product_rate" style="width:87%"></div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="price mr-1 text-muted">20$ - 50$</span>
+                            <span class="special-tag badge bg-red white-color">Sale</span>
+                          </p>
+                        </div>
+                      </nuxt-link>
+                    </div>
+                  </swiper-slide>
+                  <!-- Best Seller item end-->
+                  <!-- Best Seller item start-->
+                  <swiper-slide>
+                    <div class="product-item rounded bg-white">
+                      <nuxt-link to="">
+                        <div class="img-wrap mb-2">
+                          <img :src="require('@/assets/images/best-sellers/1.jpg')" alt="products" class="rounded-top">
+                        </div>
+                        <div class="product-content">
+                          <p class="product-tags text-uppercase">Alu, Morich</p>
+                          <p class="product-title font-bold">Product Title Here</p>
+                          <div class="rating_wrap mb-1">
+                            <div class="rating">
+                              <div class="product_rate" style="width:87%"></div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="price mr-1 text-muted">20$ - 50$</span>
+                            <span class="special-tag badge bg-red white-color">Sale</span>
+                          </p>
+                        </div>
+                      </nuxt-link>
+                    </div>
+                  </swiper-slide>
+                  <!-- Best Seller item end-->
+                  <!-- Best Seller item start-->
+                  <swiper-slide>
+                    <div class="product-item rounded bg-white">
+                      <nuxt-link to="">
+                        <div class="img-wrap mb-2">
+                          <img :src="require('@/assets/images/best-sellers/2.jpg')" alt="products" class="rounded-top">
+                        </div>
+                        <div class="product-content">
+                          <p class="product-tags text-uppercase">Alu, Morich</p>
+                          <p class="product-title font-bold">Product Title Here</p>
+                          <div class="rating_wrap mb-1">
+                            <div class="rating">
+                              <div class="product_rate" style="width:87%"></div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="price mr-1 text-muted">20$ - 50$</span>
+                            <span class="special-tag badge bg-red white-color">Sale</span>
+                          </p>
+                        </div>
+                      </nuxt-link>
+                    </div>
+                  </swiper-slide>
+                  <!-- Best Seller item end-->
+                  <!-- Best Seller item start-->
+                  <swiper-slide>
+                    <div class="product-item rounded bg-white">
+                      <nuxt-link to="">
+                        <div class="img-wrap mb-2">
+                          <img :src="require('@/assets/images/best-sellers/3.jpg')" alt="products" class="rounded-top">
+                        </div>
+                        <div class="product-content">
+                          <p class="product-tags text-uppercase">Alu, Morich</p>
+                          <p class="product-title font-bold">Product Title Here</p>
+                          <div class="rating_wrap mb-1">
+                            <div class="rating">
+                              <div class="product_rate" style="width:87%"></div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="price mr-1 text-muted">20$ - 50$</span>
+                            <span class="special-tag badge bg-red white-color">Sale</span>
+                          </p>
+                        </div>
+                      </nuxt-link>
+                    </div>
+                  </swiper-slide>
+                  <!-- Best Seller item end-->
                 <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
                 <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
               </swiper>
@@ -53,11 +221,10 @@
       </div>
     </div>
   </section>
-  <!-- Best Seller Area End ------------->
+  <!-- Best Seller Area End -->
 </template>
 
 <script>
-import {get_best_seller_products} from "~/api/urls";
 
 export default {
   name : 'BestSellerProducts',
@@ -116,37 +283,8 @@ export default {
           }
         }
       },
-      api_base_url : this.$config.API_BASE_URL
     }
   },
-  methods:{
-    getBestSellerProducts(){
-      let self = this;
-      let config = {
-        headers: {'Content-Type': 'application/json'}
-      };
-      this.$axios.$get(this.api_base_url+get_best_seller_products, config).then((res) => {
-        if (res.error === false) {
-          self.$store.commit('siteinfo/updateBestSellerProducts',res.data);
-        }
-        else {
-          console.log(res.msg)
-        }
-      }).catch((error) => {
-        console.log(error);
-      });
-    }
-  },
-  computed:{
-    bestSellerProducts(){
-      return this.$store.state.siteinfo.bestSellerProducts;
-    }
-  },
-  mounted() {
-    if (this.bestSellerProducts.length<=0){
-      this.getBestSellerProducts();
-    }
-  }
 }
 </script>
 

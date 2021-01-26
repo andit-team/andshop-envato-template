@@ -1,5 +1,5 @@
 <template>
-  <!-- Client Logo Area Start ------------->
+  <!-- Client Logo Area Start -->
   <section class="client-logo-area bg-different section-t-space">
     <div class="container">
       <div class="row">
@@ -17,15 +17,62 @@
           <div class="client-logo-slider-wrap d-flex justify-content-between">
 
             <swiper class="swiper" :options="swiperOption">
-              <span v-for="(risingStarShop, index) in risingStarsShops" :key="index">
                 <swiper-slide>
                   <div class="logo-item">
-                    <nuxt-link :to="`/rising-star/`+risingStarShop.slug">
-                      <img :src="risingStarShop.logo" :alt="risingStarShop.name">
+                    <nuxt-link to="/shops/1">
+                      <img :src="require('@/assets/images/client-logo/1.png')" alt="Shop Name">
                     </nuxt-link>
                   </div>
                 </swiper-slide>
-              </span>
+                <swiper-slide>
+                  <div class="logo-item">
+                    <nuxt-link to="/shops/1">
+                      <img :src="require('@/assets/images/client-logo/2.png')" alt="Shop Name">
+                    </nuxt-link>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="logo-item">
+                    <nuxt-link to="/shops/1">
+                      <img :src="require('@/assets/images/client-logo/3.png')" alt="Shop Name">
+                    </nuxt-link>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="logo-item">
+                    <nuxt-link to="/shops/1">
+                      <img :src="require('@/assets/images/client-logo/4.png')" alt="Shop Name">
+                    </nuxt-link>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="logo-item">
+                    <nuxt-link to="/shops/1">
+                      <img :src="require('@/assets/images/client-logo/5.png')" alt="Shop Name">
+                    </nuxt-link>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="logo-item">
+                    <nuxt-link to="/shops/1">
+                      <img :src="require('@/assets/images/client-logo/6.png')" alt="Shop Name">
+                    </nuxt-link>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="logo-item">
+                    <nuxt-link to="/shops/1">
+                      <img :src="require('@/assets/images/client-logo/7.png')" alt="Shop Name">
+                    </nuxt-link>
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="logo-item">
+                    <nuxt-link to="/shops/1">
+                      <img :src="require('@/assets/images/client-logo/8.png')" alt="Shop Name">
+                    </nuxt-link>
+                  </div>
+                </swiper-slide>
               <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
               <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
             </swiper>
@@ -35,11 +82,10 @@
       </div>
     </div>
   </section>
-  <!-- Client Logo Area End ------------->
+  <!-- Client Logo Area End -->
 </template>
 
 <script>
-import {get_rising_star_shop} from "@/api/urls";
 
 export default {
   name: 'RisingStar',
@@ -96,37 +142,10 @@ export default {
           }
         },
       },
-      api_base_url : this.$config.API_BASE_URL
     }
   },
-  methods:{
-    getRisingStarShops(){
-      let self = this;
-      let config = {
-        headers: {'Content-Type': 'application/json'}
-      };
-      this.$axios.$get(this.api_base_url+get_rising_star_shop, config).then((res) => {
-        if (res.error === false) {
-          self.$store.commit('siteinfo/updateRisingStarsShops',res.data);
-        }
-        else {
-          // console.log(res.msg)
-        }
-      }).catch((error) => {
-        console.log(error);
-      });
-    }
-  },
-  computed:{
-    risingStarsShops(){
-      return this.$store.state.siteinfo.risingStarsShops;
-    }
-  },
-  mounted() {
-    if (this.risingStarsShops.length<=0){
-      this.getRisingStarShops();
-    }
-  }
+
+
 }
 </script>
 

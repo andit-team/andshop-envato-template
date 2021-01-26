@@ -274,7 +274,7 @@
       :per-page="perPage"
       aria-controls="notification-wrap"
       class="justify-content-center mt-4"
-    ></b-pagination>
+      ></b-pagination>
 
     </b-tabs>
   </div>
@@ -282,7 +282,7 @@
 
 <script>
 export default {
- layout: 'dashboard',
+  layout: 'dashboard',
   data() {
     return {
       rows: 100,

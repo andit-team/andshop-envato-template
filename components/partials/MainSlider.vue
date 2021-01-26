@@ -6,27 +6,27 @@
           <swiper class="swiper" :options="swiperOption">
             <swiper-slide>
               <a href="#">
-                <img :src="require('@/assets/images/slider-img/main-slider.jpg')" alt="Slider" class="img-fluid">
+                <img :src="require('@/assets/images/slider-img/1.jpg')" alt="Slider" class="img-fluid">
               </a>
             </swiper-slide>
             <swiper-slide>
               <a href="#">
-                <img :src="require('@/assets/images/slider-img/main-slider.jpg')" alt="Slider" class="img-fluid">
+                <img :src="require('@/assets/images/slider-img/2.jpg')" alt="Slider" class="img-fluid">
               </a>
             </swiper-slide>
             <swiper-slide>
               <a href="#">
-                <img :src="require('@/assets/images/slider-img/main-slider.jpg')" alt="Slider" class="img-fluid">
+                <img :src="require('@/assets/images/slider-img/3.jpg')" alt="Slider" class="img-fluid">
               </a>
             </swiper-slide>
             <swiper-slide>
               <a href="#">
-                <img :src="require('@/assets/images/slider-img/main-slider.jpg')" alt="Slider" class="img-fluid">
+                <img :src="require('@/assets/images/slider-img/4.jpg')" alt="Slider" class="img-fluid">
               </a>
             </swiper-slide>
             <swiper-slide>
               <a href="#">
-                <img :src="require('@/assets/images/slider-img/main-slider.jpg')" alt="Slider" class="img-fluid">
+                <img :src="require('@/assets/images/slider-img/2.jpg')" alt="Slider" class="img-fluid">
               </a>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-export default {
+  export default {
     data() {
       return {
         swiperOption: {
@@ -57,9 +57,9 @@ export default {
         },
       }
     },
+
 }
 </script>
 
-<style>
-
+<style lang="scss">
 </style>

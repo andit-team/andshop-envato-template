@@ -19,32 +19,156 @@
 
             <swiper class="swiper" :options="swiperOption">
 
-              <span v-for="(newArrivalProduct, index) in newArrivalProducts" :key="index">
-                <!-- Best Seller item start-->
-                <swiper-slide >
-                  <div class="product-item rounded bg-white">
-                    <nuxt-link :to="`/products/${newArrivalProduct.slug}`">
-                      <div class="img-wrap mb-2">
-                        <img :src="newArrivalProduct.thumbnail_image" alt="products" class="rounded-top">
-                      </div>
-                      <div class="product-content">
-                        <!-- <p class="product-tags text-uppercase">bath & body, football, tennis</p> -->
-                        <p class="product-title font-bold">{{newArrivalProduct.name}}</p>
-                        <div class="rating_wrap mb-1">
-                          <div class="rating">
-                            <div class="product_rate" style="width:87%"></div>
-                          </div>
+              <!-- Best Seller item start-->
+              <swiper-slide >
+                <div class="product-item rounded bg-white">
+                  <nuxt-link to="/new-arrivals">
+                    <div class="img-wrap mb-2">
+                      <img :src="require('@/assets/images/best-sellers/1.jpg')" alt="products" class="rounded-top">
+                    </div>
+                    <div class="product-content">
+                      <p class="product-tags text-uppercase font-12">bath & body, football, tennis</p>
+                      <p class="product-title font-bold">Product Title</p>
+                      <div class="rating_wrap mb-1">
+                        <div class="rating">
+                          <div class="product_rate" style="width:87%"></div>
                         </div>
-                        <p>
-                          <span class="price mr-1 text-muted">{{ newArrivalProduct.wholesale_price }}৳ - {{ newArrivalProduct.price }}৳</span>
-                          <span class="special-tag badge bg-red white-color">Sale</span>
-                        </p>
                       </div>
-                    </nuxt-link>
-                  </div>
-                </swiper-slide>
-                <!-- Best Seller item end-->
-              </span>
+                      <p>
+                        <span class="price mr-1 text-muted">50$ - 40$</span>
+                        <span class="special-tag badge bg-red white-color">Sale</span>
+                      </p>
+                    </div>
+                  </nuxt-link>
+                </div>
+              </swiper-slide>
+              <!-- Best Seller item end-->
+
+              <!-- Best Seller item start-->
+              <swiper-slide >
+                <div class="product-item rounded bg-white">
+                  <nuxt-link to="/new-arrivals">
+                    <div class="img-wrap mb-2">
+                      <img :src="require('@/assets/images/best-sellers/2.jpg')" alt="products" class="rounded-top">
+                    </div>
+                    <div class="product-content">
+                      <p class="product-tags text-uppercase font-12">bath & body, football, tennis</p>
+                      <p class="product-title font-bold">Product Title</p>
+                      <div class="rating_wrap mb-1">
+                        <div class="rating">
+                          <div class="product_rate" style="width:87%"></div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="price mr-1 text-muted">50$ - 40$</span>
+                        <span class="special-tag badge bg-red white-color">Sale</span>
+                      </p>
+                    </div>
+                  </nuxt-link>
+                </div>
+              </swiper-slide>
+              <!-- Best Seller item end-->
+
+              <!-- Best Seller item start-->
+              <swiper-slide >
+                <div class="product-item rounded bg-white">
+                  <nuxt-link to="/new-arrivals">
+                    <div class="img-wrap mb-2">
+                      <img :src="require('@/assets/images/best-sellers/3.jpg')" alt="products" class="rounded-top">
+                    </div>
+                    <div class="product-content">
+                      <p class="product-tags text-uppercase font-12">bath & body, football, tennis</p>
+                      <p class="product-title font-bold">Product Title</p>
+                      <div class="rating_wrap mb-1">
+                        <div class="rating">
+                          <div class="product_rate" style="width:87%"></div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="price mr-1 text-muted">50$ - 40$</span>
+                        <span class="special-tag badge bg-red white-color">Sale</span>
+                      </p>
+                    </div>
+                  </nuxt-link>
+                </div>
+              </swiper-slide>
+              <!-- Best Seller item end-->
+
+              <!-- Best Seller item start-->
+              <swiper-slide >
+                <div class="product-item rounded bg-white">
+                  <nuxt-link to="/new-arrivals">
+                    <div class="img-wrap mb-2">
+                      <img :src="require('@/assets/images/best-sellers/4.jpg')" alt="products" class="rounded-top">
+                    </div>
+                    <div class="product-content">
+                      <p class="product-tags text-uppercase font-12">bath & body, football, tennis</p>
+                      <p class="product-title font-bold">Product Title</p>
+                      <div class="rating_wrap mb-1">
+                        <div class="rating">
+                          <div class="product_rate" style="width:87%"></div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="price mr-1 text-muted">50$ - 40$</span>
+                        <span class="special-tag badge bg-red white-color">Sale</span>
+                      </p>
+                    </div>
+                  </nuxt-link>
+                </div>
+              </swiper-slide>
+              <!-- Best Seller item end-->
+
+              <!-- Best Seller item start-->
+              <swiper-slide >
+                <div class="product-item rounded bg-white">
+                  <nuxt-link to="/new-arrivals">
+                    <div class="img-wrap mb-2">
+                      <img :src="require('@/assets/images/best-sellers/5.jpg')" alt="products" class="rounded-top">
+                    </div>
+                    <div class="product-content">
+                      <p class="product-tags text-uppercase font-12">bath & body, football, tennis</p>
+                      <p class="product-title font-bold">Product Title</p>
+                      <div class="rating_wrap mb-1">
+                        <div class="rating">
+                          <div class="product_rate" style="width:87%"></div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="price mr-1 text-muted">50$ - 40$</span>
+                        <span class="special-tag badge bg-red white-color">Sale</span>
+                      </p>
+                    </div>
+                  </nuxt-link>
+                </div>
+              </swiper-slide>
+              <!-- Best Seller item end-->
+
+              <!-- Best Seller item start-->
+              <swiper-slide >
+                <div class="product-item rounded bg-white">
+                  <nuxt-link to="/new-arrivals">
+                    <div class="img-wrap mb-2">
+                      <img :src="require('@/assets/images/best-sellers/3.jpg')" alt="products" class="rounded-top">
+                    </div>
+                    <div class="product-content">
+                      <p class="product-tags text-uppercase font-12">bath & body, football, tennis</p>
+                      <p class="product-title font-bold">Product Title</p>
+                      <div class="rating_wrap mb-1">
+                        <div class="rating">
+                          <div class="product_rate" style="width:87%"></div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="price mr-1 text-muted">50$ - 40$</span>
+                        <span class="special-tag badge bg-red white-color">Sale</span>
+                      </p>
+                    </div>
+                  </nuxt-link>
+                </div>
+              </swiper-slide>
+              <!-- Best Seller item end-->
+
               <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
               <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
             </swiper>

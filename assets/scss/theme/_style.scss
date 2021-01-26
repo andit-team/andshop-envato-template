@@ -1,13 +1,13 @@
 /*
 -------------------------------------------------
-  Theme Name: Andbaazar HTML Template
-  Theme URL: andbaazar.com
-  Author: AndItThemes
+  Theme Name: Andshop HTML Template
+  Theme URL: andshop.com
+  Author: AndIt
   Author URL:
-  Creation Date: 1/12/2020
-  Description: A default stylesheet for Andbaazar HTML Template
+  Creation Date: 25/01/2021
+  Description: A default stylesheet for Andshop HTML Template
   Version: 1.00
-  Primary use:  seo, web design, web site, digital marketing, marketing etc.
+  Primary use:  ecommerce, multivendor, seo, web design, web site, digital marketing, marketing etc.
   Support: andimpex@gmail.com,
 
   ---------------------------------------------------
@@ -648,6 +648,7 @@ button:focus {
 .cart_footer .theme-button {
     padding: 7px 13px;
     margin: 10px 5px 5px;
+    height: auto;
 }
 
 /*Middle Menu End*/
@@ -695,7 +696,7 @@ button:focus {
 	display: flex;
 	align-items: center;
 	color: $white;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	text-transform: uppercase;
 }
 
@@ -785,6 +786,10 @@ button:focus {
 #sidebar_category_menu .parent_category_list {
 	height: auto!important;
 }
+.parent_category_list li a span img {
+	height: 20px;
+	margin-right: 10px;
+}
 
 // Andbaazar Main Menu
 #mainNav #navbarSupportedContent ul.navbar-nav .nav-item:first-child .nav-link {
@@ -847,6 +852,16 @@ button:focus {
 }
 /*-------------------------------------------
     6. Hero Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    7. Client Logo Slider Area Start
+-------------------------------------------*/
+.logo-item, .logo-item img  {
+    height: 130px;
+}
+/*-------------------------------------------
+    7. Client Logo Slider Area End
 -------------------------------------------*/
 
 /*-------------------------------------------
@@ -990,6 +1005,16 @@ button:focus {
 /*-------------------------------------------
     8. Product Details Page Area Start
 -------------------------------------------*/
+.product-stock-wrap .custom-control-label::before, .product-stock-wrap .custom-control-label::after {
+	top: 30%;
+}
+.product-stock-wrap .custom-control-input:checked ~ .custom-control-label::before {
+	border-color: var(--green-color);
+	background-color: var(--green-color);
+}
+.product-stock-wrap .custom-control-input:focus{
+	box-shadow: none!important;
+}
 .stock.in-stock::before, .stock.out-of-stock::before {
     color: #81ca33;
     content: '\f058';
@@ -998,6 +1023,18 @@ button:focus {
     font-size: 14px;
     margin: -2px 8px 0 0;
 }
+.details-price-list .b-form-spinbutton, .cart-increment-decrement .b-form-spinbutton {
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid var(--dark);
+}
+.details-price-list .b-form-spinbutton output, .cart-increment-decrement .b-form-spinbutton output {
+    border: none!important;
+}
+.details-price-list .b-form-spinbutton.form-control.focus, .cart-increment-decrement .b-form-spinbutton .form-control.focus {
+    box-shadow: none!important;
+}
+
 // Product Details Photo Tab CSS
 .product-details-photo-tab .tab-img-list {
 	display: flex;
@@ -1019,13 +1056,8 @@ button:focus {
 	opacity: 1;
 	border: 1px solid var(--red);
 }
-.product-details-photo-tab .tab-content-wrap {
-	// overflow: hidden;
-}
 .product-details-photo-tab .tab-content-wrap .image-magnifier__img {
-	/* border: 1px solid #e5e8eb; */
 	border: 5px solid var(--border-secondary);
-	/* height: 600px; */
 	width: 100%;
     height: auto;
 }
@@ -1075,6 +1107,7 @@ button:focus {
 /*-------------------------------------------
     8. Product Details Page Area End
 -------------------------------------------*/
+
 
 /*-------------------------------------------
     8. Flash Sale Slider Area Start

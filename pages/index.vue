@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MainSlider />
+    <OrientationSlider />
 
     <section class="main-services-area section-t-space section-b-40-space">
       <div class="container">
@@ -126,13 +126,14 @@
       </div>
     </section>
 
-    <PaymentMethods/>
+    <PaymentMethods />
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'HomePage',
+  layout: 'public',
+  name: 'OrientationPage'
 }
 </script>

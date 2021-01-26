@@ -64,7 +64,6 @@
 
 <script>
 import { ValidationProvider, ValidationObserver } from 'vee-validate/dist/vee-validate.full.esm';
-import {user_signup} from "~/api/urls";
 
 export default {
   name : 'userRegistration',
@@ -82,41 +81,8 @@ export default {
       password : '',
       authFailed: false,
       authError: '',
-      api_base_url : this.$config.API_BASE_URL
     }
   },
-  methods: {
-    registerUser() {
-      let self = this;
-      let config = {
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
-      }
-      let payload = {
-        first_name: self.first_name,
-        last_name: self.last_name,
-        email: self.email,
-        phone: self.phone,
-        password: self.password,
-        user_type: 'customer',
-      }
-
-      self.$axios.$post(this.api_base_url+user_signup, payload, config).then((res) => {
-        if (res.error === true){
-          this.authFailed=true
-          this.authError=res.msg
-        }
-        else {
-          this.$store.commit('userinfo/updateAuthMobileNo',this.phone);
-          this.$router.push('/auth/verify-otp');
-        }
-      }).catch((error)=>{
-        console.log(error)
-      });
-    },
-  }
 
 }
 </script>

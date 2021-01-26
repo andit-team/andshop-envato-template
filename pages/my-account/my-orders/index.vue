@@ -28,10 +28,10 @@
     <div class="order-list-wrap">
       <div class="order-list-wrap-title d-flex justify-content-between">
         <div>
-          <p><strong>Order</strong> <nuxt-link to="/my-account/my-orders/1" class="color-blue">#612885948115202</nuxt-link></p>
+          <p><strong>Order</strong> <nuxt-link to="/my-account/my-orders/2" class="color-blue">#612885948115202</nuxt-link></p>
           <p class="font-14">Placed on 10 Jan 2021 14:29:39</p>
         </div>
-        <nuxt-link to="/my-account/my-orders/1" class="theme-button2 small-button rounded color-blue">Manage</nuxt-link>
+        <nuxt-link to="/my-account/my-orders/2" class="theme-button2 small-button rounded color-blue">Manage</nuxt-link>
       </div>
       <ul class="list-unstyled">
         <li class="media">

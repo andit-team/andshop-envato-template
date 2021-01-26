@@ -1,17 +1,17 @@
 <template>
   <div>
 
-    <ProductCategories/>
+    <MainSlider />
 
-    <RisingStar/>
+    <RisingStar />
 
-    <FlashDeals/>
+    <FlashDeals />
 
-    <BestSellers/>
+    <BestSellers />
 
-    <PopularCategories/>
+    <PopularCategories />
 
-    <NewArrivals/>
+    <NewArrivals />
 
     <!-- Home promotion 1 Area Start -->
     <section class="home-promotion-area-1 section-t-space">

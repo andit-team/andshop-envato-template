@@ -1,7 +1,60 @@
 <template>
   <ul class="parent_category_list">
-    <b-dropdown-item v-for="(productCategory, index) in productCategoryList" :key="index" :to="`/categories/`+productCategory.slug">
-        <span><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">{{ productCategory.name }}</span><i class="fas fa-angle-right"></i>
+    <b-dropdown-item to="/search-results">
+        <span>
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="andshop">
+          Clothing
+        </span>
+        <i class="fas fa-angle-right"></i>
+    </b-dropdown-item>
+    <b-dropdown-item to="/search-results">
+        <span>
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="andshop">
+          Computers & Accessories
+        </span>
+        <i class="fas fa-angle-right"></i>
+    </b-dropdown-item>
+    <b-dropdown-item to="/search-results">
+        <span>
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="andshop">
+          Home Decor
+        </span>
+        <i class="fas fa-angle-right"></i>
+    </b-dropdown-item>
+    <b-dropdown-item to="/search-results">
+        <span>
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="andshop">
+          Fruits
+        </span>
+        <i class="fas fa-angle-right"></i>
+    </b-dropdown-item>
+    <b-dropdown-item to="/search-results">
+        <span>
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="andshop">
+          Watches & Eyewear
+        </span>
+        <i class="fas fa-angle-right"></i>
+    </b-dropdown-item>
+    <b-dropdown-item to="/search-results">
+        <span>
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="andshop">
+          Vegetables
+        </span>
+        <i class="fas fa-angle-right"></i>
+    </b-dropdown-item>
+    <b-dropdown-item to="/search-results">
+        <span>
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="andshop">
+          Mobiles & Tablets
+        </span>
+        <i class="fas fa-angle-right"></i>
+    </b-dropdown-item>
+    <b-dropdown-item to="/search-results">
+        <span>
+          <img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="andshop">
+          Bags
+        </span>
+        <i class="fas fa-angle-right"></i>
     </b-dropdown-item>
   </ul>
 </template>

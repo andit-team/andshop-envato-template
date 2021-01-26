@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!loading">
+  <div>
     <!-- Breadcrumb Area Start -->
     <div class="breadcrumb-area bg-white">
       <div class="container">
@@ -8,8 +8,8 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb bg-transparent m-0 section-t-40-space section-b-40-space">
                 <li class="breadcrumb-item"><nuxt-link to="/">Home</nuxt-link></li>
-                <li class="breadcrumb-item"><a href="#">{{productInfo.category.name}}</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{productInfo.name}}</li>
+                <li class="breadcrumb-item"><a href="#">Vegetables</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Orange and Fruits</li>
               </ol>
             </nav>
           </div>
@@ -40,8 +40,7 @@
               </div>
 
               <ul class="tab-img-list">
-                <li
-                v-for="(productImage, index) in productInfo.images"
+                <li v-for="(productImage, index) in productImages"
                 :key="index" @click="setImage(productImage)"
                 :class="{selectedImage : (productImage==selectedImg)}"
                 class="rounded">
@@ -49,6 +48,15 @@
                   <img :src="productImage" alt="image" class="img-fluid rounded">
 
                 </li>
+                <!-- <li
+                v-for="(productImage, index) in productInfo.images"
+                :key="index" @click="setImage(productImage)"
+                :class="{selectedImage : (productImage==selectedImg)}"
+                class="rounded">
+
+                  <img :src="productImage" alt="image" class="img-fluid rounded">
+
+                </li> -->
               </ul>
 
             </div>
@@ -60,7 +68,7 @@
 
             <!-- Sort Bar Start-->
             <div class="product-details-content">
-              <h2 class="product-title mb-3">{{productInfo.name}}</h2>
+              <h2 class="product-title mb-3">T-Shirt</h2>
               <div class="rating_wrap mb-3">
                 <div class="rating">
                   <div class="product_rate" style="width:87%"></div>
@@ -83,42 +91,10 @@
                       </div>
                       <div class="price-list-right">
                         <h6>Regular Price</h6>
-                        <span class="price mr-1 text-muted">৳ {{productInfo.price}}</span>
-                        <p class="stock in-stock font-14">{{productInfo.available_stock}} in stock</p>
+                        <span class="price mr-1 text-muted">$ 50.00</span>
+                        <p class="stock in-stock font-14">500 KG in stock</p>
                       </div>
                   </div>
-                  </label>
-                </div>
-
-                <div v-if="productInfo.allow_wholesale" class="custom-control custom-radio d-flex align-items-center">
-                  <input type="radio" id="product_number1" name="product-number" class="custom-control-input">
-                  <label class="custom-control-label" for="product_number1">
-                    <div class="details-price-list d-flex align-items-center mb-3">
-                      <div class="price-list-left">
-                        <b-form-spinbutton class="mr-4" id="sb-inline" v-model="wholeSaleQty" inline></b-form-spinbutton>
-                      </div>
-                      <div class="price-list-right">
-                        <h6>Whole Sale Price</h6>
-                        <span class="price mr-1 text-muted">৳ {{productInfo.wholesale_price}}</span>
-                        <p class="stock in-stock font-14">{{productInfo.min_wholesale_quantity}} {{productInfo.unit}} Min Order</p>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-                
-                <div v-if="productInfo.allow_flash_sale" class="custom-control custom-radio d-flex align-items-center">
-                  <input type="radio" id="product_number1" name="product-number" class="custom-control-input">
-                  <label class="custom-control-label" for="product_number1">
-                    <div class="details-price-list d-flex align-items-center mb-3">
-                      <div class="price-list-left">
-                        <b-form-spinbutton class="mr-4" id="sb-inline" v-model="flashSaleQty" inline></b-form-spinbutton>
-                      </div>
-                      <div class="price-list-right">
-                        <h6>Flash Sale Price</h6>
-                        <span class="price mr-1 text-muted">৳ {{productInfo.price - productInfo.flash_sale_discount_price}}</span>
-                        <p class="stock in-stock font-14">{{productInfo.max_flash_sale_quantity}} {{productInfo.unit}} Max Order</p>
-                      </div>
-                    </div>
                   </label>
                 </div>
 
@@ -160,7 +136,7 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati explicabo expedita enim praesentium suscipit, eligendi molestiae dolorem. Possimus, modi fugiat!</p>
                   </div>
                 </b-tab>
-                <b-tab title="Reviews(1)">
+                <b-tab title="Reviews(3)">
 
                   <div class="product-details-content-box">
                     <div class="media comment-box mb-3">
@@ -180,7 +156,7 @@
                     <div class="media comment-box mb-3">
                       <img :src="require('@/assets/images/dashboard/user.png')" class="mr-3" alt="author" height="50px">
                       <div class="media-body">
-                        <h6 class="mt-0">Suraiya Aysha</h6>
+                        <h6 class="mt-0">Fatima Malik</h6>
                         <div class="given-rating">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
@@ -192,7 +168,7 @@
                     <div class="media comment-box mb-3">
                       <img :src="require('@/assets/images/dashboard/user.png')" class="mr-3" alt="author" height="50px">
                       <div class="media-body">
-                        <h6 class="mt-0">Suraiya Aysha</h6>
+                        <h6 class="mt-0">Jessica Fernandez</h6>
                         <div class="given-rating">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
@@ -461,7 +437,6 @@
 </template>
 
 <script>
-import {product_details} from "~/api/urls";
 export default {
   name: "productDetails",
 
@@ -474,62 +449,29 @@ export default {
       reqularSaleQty: 0,
       wholeSaleQty: 0,
       flashSaleQty: 0,
-      selectedImg : '',
+      selectedImg : require('@/assets/images/products/product-details-600x600.jpg'),
       productImages: [
         require('@/assets/images/products/product-details-600x600.jpg'),
         require('@/assets/images/products/product-details4-600x600.jpg'),
         require('@/assets/images/products/product-details5-600x600.jpg'),
       ],
       product_slug : this.$route.params.slug,
-      api_base_url : this.$config.API_BASE_URL
     }
   },
   methods: {
     setImage (imgURL) {
       this.selectedImg = imgURL;
     },
-    getProductDetails(){
-      let self = this;
-      let config = {
-        headers: {'Content-Type': 'application/json'}
-      };
-      this.$axios.$get(this.api_base_url+product_details+this.product_slug, config).then((res) => {
-        if (res.error === false) {
-          self.$store.commit('product/updateProductDetails',res.data);
-          this.selectedImg = res.data.images[0]
-          this.wholeSaleQty = res.data.min_wholesale_quantity
-          this.loading = false
-        }
-        else {
-          console.log(res.msg)
-        }
-      }).catch((error) => {
-        console.log(error);
-      });
-    },
-  },
-  computed:{
-    productInfo(){
-      return this.$store.state.product.productDetails;
-    }
-  },
   mounted () {
     this.showImg = false
-    this.getProductDetails();
-    console.log(this.productInfo);
   },
   updated() {
     this.showImg = true
   }
+  }
+
 }
 </script>
 
 <style scoped>
-/* #zoomer-bottom-pane-container {
-  display: block !important;
-} */
-
-/* .selectedImage {
-  border: 2px solid red;
-} */
 </style>
