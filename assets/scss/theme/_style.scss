@@ -301,7 +301,7 @@ section, .section-b-space {
 }
 
 /*--------------------------------
-   2.5 Andbaazar Template Default CSS
+   2.5 Andshop Template Default CSS
 -----------------------------------*/
 
 /*----Template Main Section ----*/
@@ -320,7 +320,7 @@ section, .section-b-space {
     opacity: .8;
 }
 /*--------------------------------
-   2.5 Andbaazar Template Default CSS
+   2.5 Andshop Template Default CSS
 -----------------------------------*/
 
 /*------------------------------------------
@@ -726,12 +726,60 @@ button:focus {
     position: relative;
     color: var(--white-color);
     font-weight: bold;
-    padding: 10px 0 10px 20px;
+    padding: 16px 0 16px 20px;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link.active {
     /*color: var(--red-color);*/
 }
+
+// Hover Dropdown Menu CSS Start
+#main_menu_wrap ul li {
+	position: relative;
+	margin-left: 10px;
+}
+#main_menu_wrap ul li .submenu, #main_menu_wrap ul li .submenu ul li .submenu {
+	position: absolute;
+	min-width: 200px;
+	background-color: #fff;
+	border: 1px solid #e5e8eb;
+	border: 1px solid var(--border-secondary);
+	/* border-top: 1px solid #1d2531; */
+	/* border-top: 1px solid var(--bg-dark); */
+	border-bottom: 2px solid #c9151b;
+	border-bottom: 2px solid var(--red-color);
+	z-index: 9;
+	opacity: 0;
+	visibility: hidden;
+	top: 56px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 5px 0;
+}
+#main_menu_wrap ul li:hover .submenu { 
+	opacity: 1;
+    visibility: visible;
+}
+#main_menu_wrap ul li .submenu ul li {
+    margin-left: 0;
+}
+#main_menu_wrap ul li .submenu ul li a {
+	display: flex;
+	padding: 10px 15px;
+	align-items: center;
+	justify-content: space-between;
+}
+#main_menu_wrap ul li .submenu ul li .submenu {
+	right: -200px;
+	top: 0;
+}
+#main_menu_wrap ul li .submenu ul li:hover .submenu { 
+	opacity: 1;
+    visibility: visible;
+}
+// Hover Dropdown Menu CSS End
+
+
 /*Top Menu Dropdown CSS*/
 .dropdown-menu {
     min-width: auto !important;
@@ -791,11 +839,11 @@ button:focus {
 	margin-right: 10px;
 }
 
-// Andbaazar Main Menu
+// Andshop Main Menu
 #mainNav #navbarSupportedContent ul.navbar-nav .nav-item:first-child .nav-link {
 	padding-left: 0;
 }
-// Andbaazar Main Menu
+// Andshop Main Menu
 
 /*-------------------------------------------
     5. Navbar Area CSS End
@@ -808,7 +856,7 @@ button:focus {
     /*display: inline-block;*/
     /*padding-right: .5rem;*/
     /*color: #6c757d;*/
-    content: ">";
+    content: "/";
 }
 .breadcrumb-item + .breadcrumb-item::before {
     /* display: inline-block; */
@@ -825,7 +873,81 @@ button:focus {
 -------------------------------------------*/
 
 /*-------------------------------------------
-    6. Andbaazar Main Slider Area Start
+    Categories Sidebar Menu Items CSS Start
+-------------------------------------------*/
+/*Left Categories Menu CSS*/
+.all-categories-menu {
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    height: 500px;
+}
+.parent_category_list {
+    height: 430px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.parent_category_list > li {
+    padding: 0 10px;
+}
+.parent_category_list li a {
+    padding: 10px 8px;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.parent_category_list li a span img {
+	height: 20px;
+	margin-right: 10px;
+}
+
+// Parent Categories Mega Menu
+.mega-menu {
+	position: absolute;
+	left: 332px;
+	background-color: #fff;
+	width: 100%;
+	z-index: 9;
+	opacity: 0;
+	visibility: hidden;
+	border: 1px solid #e5e8eb;
+	border: 1px solid var(--border-secondary);
+	height: 100%;
+	top: 0;
+	padding: 15px 0;
+	display: flex;
+	flex-wrap: wrap;
+	min-width: 430px;
+}
+.parent_category_list li:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+}
+// Parent Categories Mega Menu
+
+ /*Custom Scrollbar*/
+
+/* Works on Firefox */
+.all-categories-menu *, #categories_nav_dropdown *{
+   scrollbar-width: thin;
+   scrollbar-color: var(--red-color) transparent;
+}
+/* Works on Chrome, Edge, and Safari */
+.all-categories-menu *::-webkit-scrollbar, #categories_nav_dropdown *::-webkit-scrollbar {
+    width: 8px;
+}
+.all-categories-menu *::-webkit-scrollbar-track, #categories_nav_dropdown *::-webkit-scrollbar-track{
+    background: transparent;
+}
+.all-categories-menu *::-webkit-scrollbar-thumb, #categories_nav_dropdown *::-webkit-scrollbar-thumb{
+    background-color: var(--red-color);
+    border-radius: 0;
+    border: 0 solid transparent;
+}
+/*-------------------------------------------
+    Categories Sidebar Menu Items CSS End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    6. Andshop Main Slider Area Start
 -------------------------------------------*/
 
 /*Slider Area CSS*/
@@ -851,7 +973,7 @@ button:focus {
     opacity: 1;
 }
 /*-------------------------------------------
-    6. Hero Area End
+    6. Andshop Main Slider Area End
 -------------------------------------------*/
 
 /*-------------------------------------------
@@ -865,7 +987,7 @@ button:focus {
 -------------------------------------------*/
 
 /*-------------------------------------------
-    7. Andbaazar Services Area Start
+    7. Andshop Services Area Start
 -------------------------------------------*/
 .andbaazar-service-item {
 	background-repeat: no-repeat;
@@ -891,7 +1013,7 @@ button:focus {
 	padding: 30px 30px 30px 0;
 }
 
-// Discover Andbaazar app
+// Discover Andshop app
 .discover-andbaazar-left {
 	flex-direction: column;
 	justify-content: center;
@@ -908,7 +1030,7 @@ button:focus {
 }
 
 /*-------------------------------------------
-    7. Andbaazar Services Area End
+    7. Andshop Services Area End
 -------------------------------------------*/
 
 /*-------------------------------------------
@@ -919,6 +1041,12 @@ button:focus {
 	margin-right: -4px;
 	margin-left: -4px;
 }
+// Data Loader
+.product-row .loading-page img {
+	height: 53px;
+}
+// Data Loader
+
 .product-item-col {
 	padding-right: 4px;
 	padding-left: 4px;
@@ -950,23 +1078,28 @@ button:focus {
 
 /*Left side css*/
 .left-sidebar-title {
-    border-bottom: 1px solid #e5e8eb;
-    padding-bottom: 15px;
+	border-bottom: 1px solid #e5e8eb;
+	justify-content: space-between;
+	padding: 0 0 15px;
+	text-align: left;
+}
+.left-sidebar-title span {
+	margin-left: 10px;
 }
 .left-sidebar-content ul li a {
     padding: 8px 0;
     display: block;
 }
 .left-sidebar-content .tags span {
-    border: 1px solid var(--border-secondary);
-    display: inline-block;
-    padding: 8px 13px;
-    margin: 5px 5px 5px 0px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 14px;
+	border: 1px solid #e5e8eb;
+	border: 1px solid var(--border-secondary);
+	display: inline-block;
+	padding: 5px 8px 3px;
+	margin: 3px 3px 3px 0px;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 13px;
 }
-
 .left-sidebar-content .tags span.active {
     background-color: var(--red-color);
     color: var(--white-color);
@@ -993,10 +1126,6 @@ button:focus {
     height: 33px;
     font-size: 14px;
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.76297 11.8899C9.54611 11.547 10.1726 10.3225 10.7991 9.68571C11.2299 9.19589 11.5823 8.70607 11.9347 8.11829C12.248 7.62847 13.2269 6.69782 13.3052 6.69782C14.5191 6.35495 14.01 4.00382 12.7962 4.34669C11.8172 4.5916 11.0732 5.71818 10.4076 6.59985C9.82021 7.38356 8.99791 8.16727 8.48887 9.04894C8.41056 9.09792 8.33224 9.19589 8.29309 9.24487C8.21477 9.19589 8.17561 9.1469 8.05814 9.04894C7.70573 8.26523 6.88343 7.53051 6.37438 6.94273C5.51293 6.01207 4.57316 4.88549 3.51592 4.19975C3.39845 4.10178 3.24182 4.00382 3.04603 4.00382C3.00687 4.00382 3.00687 4.00382 2.96772 4.00382C1.98879 3.90586 1.63638 5.71818 2.45867 6.30596C3.79002 7.18763 5.00389 8.65709 6.06113 9.97959C6.7268 10.8613 7.62741 12.4287 8.76297 11.8899Z' fill='%23909BA3' /%3E%3C/svg%3E%0A") !important;
-}
-.product-search-page .product-item {
-    // width: 242px;
-    // margin: 0 20px 20px 0 !important;
 }
 /*-------------------------------------------
     8. Product Search Page Area End
@@ -1103,6 +1232,33 @@ button:focus {
     font-size: 10px;
 }
 // Product Description and Review
+
+// Product Details Left Thumb Style
+.product-details-left-thumb .product-details-photo-tab {
+	display: flex;
+}
+.product-details-left-thumb .product-details-photo-tab .tab-img-list {
+	display: inline-flex;
+	flex-direction: column;
+}
+.product-details-left-thumb .product-details-photo-tab .tab-img-list li img {
+	width: 65px;
+}
+// Product Details Left Thumb Style
+
+// Product Details Left Thumb Style
+.product-details-right-thumb .product-details-photo-tab {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.product-details-right-thumb .product-details-photo-tab .tab-img-list {
+	display: inline-flex;
+	flex-direction: column;
+}
+.product-details-right-thumb .product-details-photo-tab .tab-img-list li img {
+	width: 65px;
+}
+// Product Details Left Thumb Style
 
 /*-------------------------------------------
     8. Product Details Page Area End
@@ -2073,7 +2229,7 @@ button:focus {
         left: 36%;
     }
 
-    // Andbaazar Main
+    // Andshop Main
     .andbaazar-mobile-app img {
         height: 350px;
     }
@@ -2153,7 +2309,7 @@ button:focus {
         left: 11%;
     }
 
-    // Andbaazar Main
+    // Andshop Main
     .andbaazar-service-item {
         flex-direction: column;
         background-size: cover;
@@ -2316,7 +2472,7 @@ button:focus {
         margin-right: 7px;
     }
 
-    // Andbaazar Main
+    // Andshop Main
     p.andbaazar-subtitle {
         width: 100%!important;
     }
@@ -2348,7 +2504,7 @@ button:focus {
         height: 330px !important;
     }
 
-    // Andbaazar Main
+    // Andshop Main
     .andbaazar-mobile-app img {
         height: 248px;
     }
@@ -2401,7 +2557,7 @@ button:focus {
         display: none;
     }
 
-    // Andbaazar Main
+    // Andshop Main
     .discover-andbaazar-app .row {
         flex-direction: column-reverse;
         text-align: center;
@@ -2473,7 +2629,7 @@ button:focus {
         display: none;
     }
 
-    // Andbaazar Main
+    // Andshop Main
     .join-with-us-item .service-img-wrap {
         height: 457px;
     }
@@ -2503,7 +2659,7 @@ button:focus {
         height: 200px;
     }
 
-    // Andbaazar Main
+    // Andshop Main
     .join-with-us-item .service-img-wrap {
         height: 390px;
     }
@@ -2567,7 +2723,7 @@ button:focus {
         margin-top: 6px;
     }
 
-    // Andbaazar Main
+    // Andshop Main
     .join-with-us-item .service-img-wrap {
         height: 324px;
     }

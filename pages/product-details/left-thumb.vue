@@ -19,7 +19,7 @@
     <!-- Breadcrumb Area End -->
 
     <!-- Product Search Page Area Start -->
-    <section class="product-details-page-area section-t-space bg-white">
+    <section class="product-details-page-area product-details-left-thumb section-t-space bg-white">
       <div class="container">
         <div class="row">
           <!-- Product Details Left Side-->
@@ -86,8 +86,8 @@
                         <p class="stock in-stock font-14">500 KG in stock</p>
                       </div>
                   </div>
-                  <!-- </label>
-                </div> -->
+                  <!-- </label> -->
+                <!-- </div> -->
 
               </div>
               <div class="mb-3"><button class="theme-button rounded">+ Add to cart</button></div>
@@ -430,7 +430,11 @@
 <script>
 export default {
   name: "productDetails",
-
+  head() {
+    return {
+      title: 'Product Details - Left Thumb'
+    }
+  },
   data() {
     return {
       showImg: false,

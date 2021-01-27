@@ -52,7 +52,7 @@
               <div class="form-group">
                 <button type="submit" class="theme-button rounded w-100 justify-content-center">Register</button>
               </div>
-              <p class="dont-have-account text-center">Already have an account? <nuxt-link to="/auth/login">Login</nuxt-link></p>
+              <p class="dont-have-account text-center">Already have an account? <nuxt-link to="/my-account/auth/login">Login</nuxt-link></p>
             </form>
           </ValidationObserver>
         </div>

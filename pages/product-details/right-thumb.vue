@@ -19,7 +19,7 @@
     <!-- Breadcrumb Area End -->
 
     <!-- Product Search Page Area Start -->
-    <section class="product-details-page-area section-t-space bg-white">
+    <section class="product-details-page-area product-details-right-thumb section-t-space bg-white">
       <div class="container">
         <div class="row">
           <!-- Product Details Left Side-->
@@ -69,12 +69,12 @@
               <h5 class="mb-3">
                 <span class="price mr-1 text-muted">$45.00 - $95.00</span>
               </h5>
-              <p class="product-description mb-md-3 mb-3 mb-lg-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores beatae fuga harum laboriosam maiores quasi quidem quo repudiandae voluptate.</p>
+              <p class="product-description mb-md-3 mb-3 mb-lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores beatae fuga harum laboriosam maiores quasi quidem quo repudiandae voluptate.</p>
 
-              <div class="product-stock-wrap mb-md-3 mb-3 mb-lg-5">
+              <div class="product-stock-wrap mb-md-3 mb-3 mb-lg-3">
 
-                <!-- <div class="custom-control custom-radio d-flex align-items-center">
-                  <input type="radio" id="product_number2" name="product-number" class="custom-control-input">
+                <!-- <div class="d-flex align-items-center"> -->
+                  <!-- <input type="radio" id="product_number2" name="product-number" class="custom-control-input">
                   <label class="custom-control-label" for="product_number2"> -->
                     <div class="details-price-list d-flex align-items-center mb-3">
                       <div class="price-list-left">
@@ -86,8 +86,8 @@
                         <p class="stock in-stock font-14">500 KG in stock</p>
                       </div>
                   </div>
-                  <!-- </label>
-                </div> -->
+                  <!-- </label> -->
+                <!-- </div> -->
 
               </div>
               <div class="mb-3"><button class="theme-button rounded">+ Add to cart</button></div>
@@ -430,7 +430,11 @@
 <script>
 export default {
   name: "productDetails",
-
+  head() {
+    return {
+      title: 'Product Details - Right Thumb'
+    }
+  },
   data() {
     return {
       showImg: false,

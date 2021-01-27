@@ -34,30 +34,38 @@
 
       <nav class="mb-3 dashboard-left-menu-list">
         <b-nav vertical>
-          <div class="left-menu-item"><b-nav-item to="/"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar"> Basic Information</b-nav-item></div>
-          <div class="left-menu-item"><b-nav-item to="/my-account/address-book"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">Address Book</b-nav-item></div>
+          <div class="left-menu-item"><b-nav-item to="/my-account/"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop"> Basic Information</b-nav-item></div>
+          <div class="left-menu-item"><b-nav-item to="/my-account/address-book"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Address Book</b-nav-item></div>
           <div class="left-menu-item">
-            <b-nav-item v-b-toggle.wallet-service><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">Wallet Service<i class="fas fa-angle-right"></i></b-nav-item>
+            <b-nav-item v-b-toggle.wallet-service><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Wallet Service<i class="fas fa-angle-right"></i></b-nav-item>
               <b-collapse id="wallet-service" class="sub-menu">
-                <b-nav-item to="/wallet-service/transaction-history"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">Transaction history</b-nav-item>
-                <b-nav-item to="/wallet-service/recharge"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">Recharge</b-nav-item>
-                <b-nav-item to="/wallet-service/withdrawal-request"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">Withdrawal request</b-nav-item>
+                <b-nav-item to="/wallet-service/transaction-history"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Transaction history</b-nav-item>
+                <b-nav-item to="/wallet-service/recharge"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Recharge</b-nav-item>
+                <b-nav-item to="/wallet-service/withdrawal-request"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Withdrawal request</b-nav-item>
               </b-collapse>
           </div>
 
-          <div class="left-menu-item"><b-nav-item to="/my-account/wishlist"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">Wishlist</b-nav-item></div>
+          <div class="left-menu-item"><b-nav-item to="/my-account/wishlist"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Wishlist</b-nav-item></div>
 
           <div class="left-menu-item">
-            <b-nav-item to="/my-account/my-orders/" v-b-toggle.my-orders><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">My Orders<i class="fas fa-angle-right"></i></b-nav-item>
+            <b-nav-item to="/my-account/my-orders/" v-b-toggle.my-orders><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">My Orders<i class="fas fa-angle-right"></i></b-nav-item>
               <b-collapse id="my-orders" class="sub-menu">
-                <b-nav-item to="/my-account/my-returns"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">My Returns</b-nav-item>
-                <b-nav-item to="/my-account/my-cancellations"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">My Cancellations</b-nav-item>
+                <b-nav-item to="/my-account/my-orders/1"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Order Tracking</b-nav-item>
+                <b-nav-item to="/my-account/my-returns"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">My Returns</b-nav-item>
+                <b-nav-item to="/my-account/my-cancellations"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">My Cancellations</b-nav-item>
               </b-collapse>
           </div>
 
-          <div class="left-menu-item"><b-nav-item to="/my-account/my-reviews"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">My Reviews</b-nav-item></div>
-          <div class="left-menu-item"><b-nav-item to="/my-account/notifications"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">Notification</b-nav-item></div>
-          <div class="left-menu-item"><b-nav-item to="#"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="krishibaazar">Logout</b-nav-item></div>
+          <div class="left-menu-item"><b-nav-item to="/my-account/my-reviews"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">My Reviews</b-nav-item></div>
+          <div class="left-menu-item">
+            <b-nav-item v-b-toggle.news-feed><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">News Feeds<i class="fas fa-angle-right"></i></b-nav-item>
+              <b-collapse id="news-feed" class="sub-menu">
+                <b-nav-item to="/my-account/news-feed/"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">All Posts</b-nav-item>
+                <b-nav-item to="/my-account/news-feed/my-posts"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">My Posts</b-nav-item>
+              </b-collapse>
+          </div>
+          <div class="left-menu-item"><b-nav-item to="/my-account/notifications"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Notification</b-nav-item></div>
+          <div class="left-menu-item"><b-nav-item to="/my-account/auth/registration"><img src="https://www.flaticon.com/svg/static/icons/svg/2922/2922982.svg" alt="Andshop">Logout</b-nav-item></div>
         </b-nav>
       </nav>
 

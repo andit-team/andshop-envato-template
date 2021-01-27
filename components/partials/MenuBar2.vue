@@ -240,50 +240,94 @@
               </div>
 
               <div class="col-md-9 col-lg-9 p-0">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <!-- <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">All Shops</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Best Offers</a>
-                    </li>
-                  </ul> -->
+                <div class="collapse navbar-collapse" id="main_menu_wrap">
+
                   <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     
-                    <b-nav-item-dropdown right>
-                      <template #button-content>
-                        Home<i class="fas fa-angle-down ml-2"></i>
-                      </template>
-                      <b-dropdown-item href="#">Fashion</b-dropdown-item>
-                      <b-dropdown-item href="#">Electronics</b-dropdown-item>
-                      <b-dropdown-item href="#">Furniture</b-dropdown-item>
-                      <b-dropdown-item href="#">Groceries</b-dropdown-item>
-                    </b-nav-item-dropdown>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Shop</a>
+                      <a class="nav-link" href="#">Home<i class="fas fa-angle-down ml-2"></i></a>
+                      <div class="submenu">
+                        <ul>
+                          <li><nuxt-link to="/fashion">Fashion</nuxt-link></li>
+                          <li><nuxt-link to="/electronics">Electronics</nuxt-link></li>
+                          <li><nuxt-link to="/furniture">Furniture</nuxt-link></li>
+                          <li><nuxt-link to="/groceries">Groceries</nuxt-link></li>
+                        </ul>
+                      </div>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Products</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <b-nav-item-dropdown right>
-                      <template #button-content>
-                        Pages<i class="fas fa-angle-down ml-2"></i>
-                      </template>
 
-                      <b-dropdown-item href="#">Account</b-dropdown-item>
-                      <b-dropdown-item href="#">About Us</b-dropdown-item>
-                      <b-dropdown-item href="#">Review</b-dropdown-item>
-                      <b-dropdown-item href="#">Order Success</b-dropdown-item>
-                      <b-dropdown-item href="#">404</b-dropdown-item>
-                      <b-dropdown-item href="#">FAQ</b-dropdown-item>
-                      <b-dropdown-item href="#">Coming Soon</b-dropdown-item>
-                    </b-nav-item-dropdown>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Blog</a>
+                      <nuxt-link class="nav-link" to="/shops">Shop</nuxt-link>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Products<i class="fas fa-angle-down ml-2"></i></a>
+                      <div class="submenu">
+                        <ul>
+                          <li><nuxt-link to="/search-results">Left Sidebar</nuxt-link></li>
+                          <li><nuxt-link to="/search-results/right-sidebar">Right Sidebar</nuxt-link></li>
+                          <li><nuxt-link to="/best-sellers">No Sidebar</nuxt-link></li>
+                          <li><nuxt-link to="#">Product Details<i class="fas fa-angle-right ml-2"></i></nuxt-link>
+                            <ul class="submenu">
+                              <li><nuxt-link to="/product-details">Style 1</nuxt-link></li>
+                              <li><nuxt-link to="/product-details/left-thumb">Style 2</nuxt-link></li>
+                              <li><nuxt-link to="/product-details/right-thumb">Style 3</nuxt-link></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pages<i class="fas fa-angle-down ml-2"></i></a>
+                      <div class="submenu">
+                        <ul>
+                          <li>
+                            <nuxt-link to="#">Account<i class="fas fa-angle-right ml-2"></i></nuxt-link>
+                            <ul class="submenu">
+                              <li><nuxt-link to="#">Dashboard</nuxt-link></li>
+                              <li><nuxt-link to="#">Address Book</nuxt-link></li>
+                              <li><nuxt-link to="#">Cart</nuxt-link></li>
+                              <li><nuxt-link to="#">Wishlist</nuxt-link></li>
+                              <li><nuxt-link to="#">Checkout</nuxt-link></li>
+                              <li><nuxt-link to="#">My Orders</nuxt-link></li>
+                              <li><nuxt-link to="#">Order Tracking</nuxt-link></li>
+                              <li><nuxt-link to="#">My Reviews</nuxt-link></li>
+                              <li><nuxt-link to="#">Wallet Service</nuxt-link></li>
+                              <li><nuxt-link to="#">Notifications</nuxt-link></li>
+                            </ul>  
+                          </li>
+                          <li>
+                            <nuxt-link to="#">Authentication<i class="fas fa-angle-right ml-2"></i></nuxt-link>
+                            <ul class="submenu">
+                              <li><nuxt-link to="#">Login</nuxt-link></li>
+                              <li><nuxt-link to="#">Register</nuxt-link></li>
+                              <li><nuxt-link to="#">Forget Password</nuxt-link></li>
+                              <li><nuxt-link to="#">Reset Password</nuxt-link></li>
+                              <li><nuxt-link to="#">Verify Email Address</nuxt-link></li>
+                              <li><nuxt-link to="#">Verify Mobile No.</nuxt-link></li>
+                              <li><nuxt-link to="#">Verify OTP</nuxt-link></li>
+                            </ul>  
+                          </li>
+                          <li><nuxt-link to="#">About Us</nuxt-link></li>
+                          <li><nuxt-link to="#">Contact Us</nuxt-link></li>
+                          <li><nuxt-link to="#">News Feeds</nuxt-link></li>
+                          <li><nuxt-link to="#">404</nuxt-link></li>
+                          <li><nuxt-link to="#">FAQ</nuxt-link></li>
+                          <li><nuxt-link to="#">Terms & Conditions</nuxt-link></li>
+                          <li><nuxt-link to="#">Return Policy</nuxt-link></li>
+                          <li><nuxt-link to="#">Coming Soon</nuxt-link></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Blog<i class="fas fa-angle-down ml-2"></i></a>
+                      <div class="submenu">
+                        <ul>
+                          <li><nuxt-link to="#">Left Sidebar</nuxt-link></li>
+                          <li><nuxt-link to="#">Right Sidebar</nuxt-link></li>
+                          <li><nuxt-link to="#">No Sidebar</nuxt-link></li>
+                          <li><nuxt-link to="#">Blog Details</nuxt-link></li>
+                        </ul>
+                      </div>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Sell on Andshop</a>

@@ -20,14 +20,14 @@
               <input type="checkbox" class="form-check-input" id="checkbox" v-model="remember_me">
               <div class="remember-box d-flex justify-content-between">
                 <label class="form-check-label" for="checkbox">Remember me</label>
-                <nuxt-link to="/auth/forget-password">Forgot password ?</nuxt-link>
+                <nuxt-link to="/my-account/auth/forget-password">Forgot password ?</nuxt-link>
               </div>
             </div>
 
             <div class="form-group">
               <button type="submit" class="theme-button rounded w-100 justify-content-center">Log In</button>
             </div>
-            <p class="dont-have-account text-center">Don’t have an account? <nuxt-link to="/auth/registration">Sign up</nuxt-link></p>
+            <p class="dont-have-account text-center">Don’t have an account? <nuxt-link to="/my-account/auth/registration">Sign up</nuxt-link></p>
           </form>
         </div>
       </div>

@@ -147,7 +147,7 @@
 
 <script>
 export default {
-  layout: 'news-feed-layout',
+  layout: 'dashboard',
   data() {
     return {
       favorite: false,

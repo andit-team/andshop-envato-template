@@ -21,7 +21,7 @@
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link to="">
+                      <nuxt-link to="/product-details">
                         <div class="img-wrap mb-2">
                           <img :src="require('@/assets/images/best-sellers/1.jpg')" alt="products" class="rounded-top">
                         </div>
@@ -46,7 +46,7 @@
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link to="">
+                      <nuxt-link to="/product-details">
                         <div class="img-wrap mb-2">
                           <img :src="require('@/assets/images/best-sellers/2.jpg')" alt="products" class="rounded-top">
                         </div>
@@ -71,7 +71,7 @@
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link to="">
+                      <nuxt-link to="/product-details">
                         <div class="img-wrap mb-2">
                           <img :src="require('@/assets/images/best-sellers/3.jpg')" alt="products" class="rounded-top">
                         </div>
@@ -92,10 +92,11 @@
                     </div>
                   </swiper-slide>
                   <!-- Best Seller item end-->
+
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link to="">
+                      <nuxt-link to="/product-details">
                         <div class="img-wrap mb-2">
                           <img :src="require('@/assets/images/best-sellers/4.jpg')" alt="products" class="rounded-top">
                         </div>
@@ -116,10 +117,11 @@
                     </div>
                   </swiper-slide>
                   <!-- Best Seller item end-->
+
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link to="">
+                      <nuxt-link to="/product-details">
                         <div class="img-wrap mb-2">
                           <img :src="require('@/assets/images/best-sellers/5.jpg')" alt="products" class="rounded-top">
                         </div>
@@ -140,10 +142,11 @@
                     </div>
                   </swiper-slide>
                   <!-- Best Seller item end-->
+
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link to="">
+                      <nuxt-link to="/product-details">
                         <div class="img-wrap mb-2">
                           <img :src="require('@/assets/images/best-sellers/1.jpg')" alt="products" class="rounded-top">
                         </div>
@@ -164,10 +167,11 @@
                     </div>
                   </swiper-slide>
                   <!-- Best Seller item end-->
+
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link to="">
+                      <nuxt-link to="/product-details">
                         <div class="img-wrap mb-2">
                           <img :src="require('@/assets/images/best-sellers/2.jpg')" alt="products" class="rounded-top">
                         </div>
@@ -188,10 +192,11 @@
                     </div>
                   </swiper-slide>
                   <!-- Best Seller item end-->
+
                   <!-- Best Seller item start-->
                   <swiper-slide>
                     <div class="product-item rounded bg-white">
-                      <nuxt-link to="">
+                      <nuxt-link to="/product-details">
                         <div class="img-wrap mb-2">
                           <img :src="require('@/assets/images/best-sellers/3.jpg')" alt="products" class="rounded-top">
                         </div>

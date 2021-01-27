@@ -22,91 +22,6 @@
     <section class="product-search-page best-seller-area section-t-space bg-white">
       <div class="container">
         <div class="row">
-          <!-- Product Search Page Left Side-->
-          <div class="col-12 col-md-3 col-lg-3">
-            <div class="product-search-left-side">
-              <!-- Left side bar box start-->
-              <div class="search-left-sidebar-box mb-4">
-                <b-navbar-toggle target="product_categories_collapse" class="left-sidebar-title text-uppercase w-100 mb-4 d-flex">
-                  <template #default="{ expanded }">
-                    <h5>Product categories</h5>
-                    <span v-if="expanded"><i class="fas fa-angle-up"></i></span>
-                    <span v-else ><i class="fas fa-angle-down"></i></span>
-                  </template>
-
-                </b-navbar-toggle>
-
-                <b-collapse id="product_categories_collapse" visible class="left-sidebar-content">
-                  <ul>
-                    <li><a href="#">Product categories</a></li>
-                    <li><a href="#">Fitness</a></li>
-                    <li><a href="#">Football</a></li>
-                    <li><a href="#">Hair care</a></li>
-                    <li><a href="#">Make Up</a></li>
-                    <li><a href="#">Men's</a></li>
-                    <li><a href="#">Hair care</a></li>
-                    <li><a href="#">Football</a></li>
-                    <li><a href="#">Hair care</a></li>
-                    <li><a href="#">Make Up</a></li>
-                    <li><a href="#">Men's</a></li>
-                    <li><a href="#">Hair care</a></li>
-                  </ul>
-                </b-collapse>
-              </div>
-              <!-- Left side bar box end-->
-
-              <!-- Left side bar box start-->
-              <div class="search-left-sidebar-box mb-4">
-                <b-navbar-toggle target="filter_by_price_collapse" class="left-sidebar-title text-uppercase w-100 mb-4 d-flex">
-                  <template #default="{ expanded }">
-                    <h5>Filter by price</h5>
-                    <span v-if="expanded"><i class="fas fa-angle-up"></i></span>
-                    <span v-else ><i class="fas fa-angle-down"></i></span>
-                  </template>
-                </b-navbar-toggle>
-                <b-collapse id="filter_by_price_collapse" visible class="left-sidebar-content range-slider-box">
-                  <vue-slider  
-                    :min="0" 
-                    :max="5000"
-                    v-model="range"
-                    :enable-cross="false"
-                  ></vue-slider>
-                  <p class="mt-3">Price: <span>$0 - $5000</span></p>
-                </b-collapse>
-              </div>
-              <!-- Left side bar box end-->
-
-              <!-- Left side bar box start-->
-              <div class="search-left-sidebar-box mb-4">
-                <b-navbar-toggle target="product_tags_collapse" class="left-sidebar-title text-uppercase w-100 mb-4 d-flex">
-                  <template #default="{ expanded }">
-                    <h5>Product tags</h5>
-                    <span v-if="expanded"><i class="fas fa-angle-up"></i></span>
-                    <span v-else ><i class="fas fa-angle-down"></i></span>
-                  </template>
-                </b-navbar-toggle>
-
-                <b-collapse id="product_tags_collapse" visible class="left-sidebar-content">
-                  <div class="tags">
-                    <span class="active">Product categories</span>
-                    <span>Fitness</span>
-                    <span>Football</span>
-                    <span>Hair care</span>
-                    <span>Make Up</span>
-                    <span>Men's</span>
-                    <span>Hair care</span>
-                    <span>Football</span>
-                    <span>Hair care</span>
-                    <span>Make Up</span>
-                    <span>Men's</span>
-                    <span>Hair care</span>
-                  </div>
-                </b-collapse>
-              </div>
-              <!-- Left side bar box end-->
-            </div>
-          </div>
-          <!-- Product Search Page Left Side-->
 
           <!-- Product Search Page Right Side-->
           <div class="col-12 col-md-9">
@@ -351,6 +266,93 @@
 
           </div>
           <!-- Product Search Page Right Side-->
+          
+          <!-- Product Search Page Left Side-->
+          <div class="col-12 col-md-3 col-lg-3">
+            <div class="product-search-left-side">
+              <!-- Left side bar box start-->
+              <div class="search-left-sidebar-box mb-4">
+                <b-navbar-toggle target="product_categories_collapse" class="left-sidebar-title text-uppercase w-100 mb-4 d-flex">
+                  <template #default="{ expanded }">
+                    <h5>Product categories</h5>
+                    <span v-if="expanded"><i class="fas fa-angle-up"></i></span>
+                    <span v-else ><i class="fas fa-angle-down"></i></span>
+                  </template>
+
+                </b-navbar-toggle>
+
+                <b-collapse id="product_categories_collapse" visible class="left-sidebar-content">
+                  <ul>
+                    <li><a href="#">Product categories</a></li>
+                    <li><a href="#">Fitness</a></li>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Hair care</a></li>
+                    <li><a href="#">Make Up</a></li>
+                    <li><a href="#">Men's</a></li>
+                    <li><a href="#">Hair care</a></li>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Hair care</a></li>
+                    <li><a href="#">Make Up</a></li>
+                    <li><a href="#">Men's</a></li>
+                    <li><a href="#">Hair care</a></li>
+                  </ul>
+                </b-collapse>
+              </div>
+              <!-- Left side bar box end-->
+
+              <!-- Left side bar box start-->
+              <div class="search-left-sidebar-box search-right-sidebar-box mb-4">
+                <b-navbar-toggle target="filter_by_price_collapse" class="left-sidebar-title text-uppercase w-100 mb-4 d-flex">
+                  <template #default="{ expanded }">
+                    <h5>Filter by price</h5>
+                    <span v-if="expanded"><i class="fas fa-angle-up"></i></span>
+                    <span v-else ><i class="fas fa-angle-down"></i></span>
+                  </template>
+                </b-navbar-toggle>
+                <b-collapse id="filter_by_price_collapse" visible class="left-sidebar-content range-slider-box">
+                  <vue-slider  
+                    :min="0" 
+                    :max="5000"
+                    v-model="range"
+                    :enable-cross="false"
+                  ></vue-slider>
+                  <p class="mt-3">Price: <span>$0 - $5000</span></p>
+                </b-collapse>
+              </div>
+              <!-- Left side bar box end-->
+
+              <!-- Left side bar box start-->
+              <div class="search-left-sidebar-box mb-4">
+                <b-navbar-toggle target="product_tags_collapse" class="left-sidebar-title text-uppercase w-100 mb-4 d-flex">
+                  <template #default="{ expanded }">
+                    <h5>Product tags</h5>
+                    <span v-if="expanded"><i class="fas fa-angle-up"></i></span>
+                    <span v-else ><i class="fas fa-angle-down"></i></span>
+                  </template>
+                </b-navbar-toggle>
+
+                <b-collapse id="product_tags_collapse" visible class="left-sidebar-content">
+                  <div class="tags">
+                    <span class="active">Product categories</span>
+                    <span>Fitness</span>
+                    <span>Football</span>
+                    <span>Hair care</span>
+                    <span>Make Up</span>
+                    <span>Men's</span>
+                    <span>Hair care</span>
+                    <span>Football</span>
+                    <span>Hair care</span>
+                    <span>Make Up</span>
+                    <span>Men's</span>
+                    <span>Hair care</span>
+                  </div>
+                </b-collapse>
+              </div>
+              <!-- Left side bar box end-->
+            </div>
+          </div>
+          <!-- Product Search Page Left Side-->
+
         </div>
       </div>
     </section>
